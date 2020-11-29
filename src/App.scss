@@ -310,6 +310,18 @@ $scrollTime: 1s;
       h2 {
         color: white;
       }
+
+      // new
+      .overlay {
+        display: none;
+      }
+
+      .overlay-container:hover .overlay {
+        display: block;
+      }
+
+      // end new
+
       .overlay-top {
         display: none;
       }

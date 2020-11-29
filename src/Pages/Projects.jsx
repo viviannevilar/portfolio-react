@@ -202,7 +202,7 @@ function Projects() {
                 <div className="skw-page__skewed">
                   <div className="skw-page__content">
                     <div className="icons">
-                      <a href="http://gofundshe.herokuapp.com"><FaExternalLinkAlt className="fa-icon fa-4x black" /></a>
+                      <a href="http://localhost:8000/"><FaExternalLinkAlt className="fa-icon fa-4x black" /></a>
                       <a href="https://github.com/viviannevilar/Django-project"><FaGithub className="fa-icon fa-4x black" /></a>
                     </div>
                   </div>
@@ -210,7 +210,6 @@ function Projects() {
               </div>
 
             </div>
-
 
           </div>
 
@@ -263,7 +262,7 @@ function Projects() {
 
           </div>
 
-          {/* Page 5 */}
+          {/* Page 5 - Webscraper - Coles */}
           <div className="skw-page skw-page-5">
 
             <div className="overlay-container">
@@ -296,14 +295,6 @@ function Projects() {
                   </div>
                 </div>
               </div>
-
-
-
-
-
-
-
-
 
             </div>
 
