@@ -1,0 +1,32 @@
+#nav {
+   width: 100%;
+   height: 5vh;
+   background: #46d68f;
+   display: flex;
+   justify-content: center;
+   position: sticky;
+   top: 0px;
+   left: 0px;
+}
+
+header div {
+   display: flex;
+   justify-content: center;
+}
+
+header div a img {
+   max-width: 10em;
+   padding-top: 0.8em;
+   padding-bottom: 0.8em;
+   object-fit: contain; 
+}
+
+div#header-name {
+   display: flex;
+   justify-content: center;
+   align-self: center; /*bottom instead of top*/
+}
+
+div#header-name h2 {
+   display: none;
+}
