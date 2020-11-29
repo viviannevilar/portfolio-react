@@ -88,9 +88,18 @@ body {
 .overlay {
   display: none;
 }
+
 .overlay-container:hover .overlay {
   display: block;
+  transition: 2s;
 }
+
+// might delete this, just seeing if it helps with deployed version
+.overlay-container:hover .overlay-top {
+  display: block;
+  transition: 2s;
+}
+
 .overlay-container:hover .bf-overlay {
   filter: contrast(calc(0.5)) brightness(1);
  //filter: contrast(calc(0.5/1.5)) brightness(1.5);
@@ -271,6 +280,11 @@ $scrollTime: 1s;
          //background: lighten(#191b1f, 0%);
          background-color: var(--crowd-gray);
       }
+      .overlay-container:hover .bf-overlay {
+         filter: contrast(calc(0.5)) brightness(1);
+      }
+
+
    }
    &-4 {
       .skw-page__half--left .skw-page__content {
@@ -316,18 +330,15 @@ $scrollTime: 1s;
         display: none;
       }
 
-      .overlay-container:hover .overlay {
+      .overlay-container:hover .overlay, .overlay-container:hover .overlay-top {
         display: block;
+        position: absolute;
       }
 
       // end new
 
       .overlay-top {
         display: none;
-      }
-      .overlay-container:hover .overlay-top {
-        display: block;
-        position: absolute
       }
 
       .overlay-container:hover {

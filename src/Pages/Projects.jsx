@@ -213,15 +213,30 @@ function Projects() {
 
           </div>
 
-        {/* ********* Skewed-slides - Page 3 ********* */}
+        {/* ********* Crowdfunding - Page 3 ********* */}
         {/*          *************************         */}
           <div className="skw-page skw-page-3">
 
-            <div className="skw-page__half skw-page__half--left">
+          <div className="overlay-container">
+
+            <div className="skw-page__half skw-page__half--left bf-overlay">
               <div className="skw-page__skewed">
                 <div className="skw-page__content"></div>
               </div>
             </div>
+
+            <div className="skw-page__half skw-page__half--left overlay">
+                <div className="skw-page__skewed">
+                  <div className="skw-page__content">
+                  <div className="icons">
+                      <a href="https://gofundshe.herokuapp.com/"><FaExternalLinkAlt className="fa-icon fa-4x crowd-white" /></a>
+                      <a href="https://github.com/viviannevilar/crowd-react"><FaGithub className="fa-icon fa-4x crowd-pink" /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+          </div>
 
             <div className="skw-page__half skw-page__half--right">
               <div className="skw-page__skewed">
@@ -235,7 +250,7 @@ function Projects() {
 
           </div>
 
-          {/* Page 4 */}
+          {/* Group Project - Page 4 */}
           <div className="skw-page skw-page-4">
 
             <div className="skw-page__half skw-page__half--left">
@@ -277,9 +292,6 @@ function Projects() {
               <div className="skw-page__half skw-page__half--left overlay">
                 <div className="skw-page__skewed">
                   <div className="skw-page__content">
-                    <div className="icons">
-
-                    </div>
                   </div>
                 </div>
               </div>
@@ -311,7 +323,7 @@ function Projects() {
           </div>
 
           
-        {/* ********* Django/SheCodes News - Page 6 ********* */}
+        {/* ********* Portfolio - sweked pages - Page 6 ********* */}
         {/*          ******************         */}
         <div className="skw-page skw-page-6">
 
