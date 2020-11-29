@@ -109,8 +109,8 @@ function Projects() {
                   <div className="skw-page__content">
                     <div className="icons">
                       <div className="icon-wrapper">
-                      <a id="github-python" href="https://github.com/viviannevilar/Python-project"><FaGithub id="python" className="fa-icon fa-4x python-black" /></a>
-                      <p id="invisible">git repository</p>
+                        <a id="github-python" href="https://github.com/viviannevilar/Python-project"><FaGithub id="python" className="fa-icon fa-4x python-black" /></a>
+                        <p className="invisible">git repository</p>
                       </div>
                     </div>
                   </div>
@@ -184,7 +184,12 @@ function Projects() {
               <div className="skw-page__skewed">
                 <div className="skw-page__content django">
                     <Logo src={LogoDjango}/> 
-                    <h2 className="skw-page__heading fw-bold">{"{Django}"}</h2>
+                    <h2 id="django" className="skw-page__heading fw-bold">{"{SheCodes} News"}</h2>
+                    <div className="description black">
+                      <h3>Django</h3>
+                    <p>My first <span className="white">Django</span> project, this news website allows registered users to post stories. Users can also like and favourite stories and see them in their profile. 
+                    </p>
+                  </div>
 
                 </div>
               </div>
@@ -202,8 +207,14 @@ function Projects() {
                 <div className="skw-page__skewed">
                   <div className="skw-page__content">
                     <div className="icons">
-                      <a href="http://localhost:8000/"><FaExternalLinkAlt className="fa-icon fa-4x black" /></a>
-                      <a href="https://github.com/viviannevilar/Django-project"><FaGithub className="fa-icon fa-4x black" /></a>
+                      <div>
+                        <a href="http://localhost:8000/"><FaExternalLinkAlt className="fa-icon fa-4x black" /></a>
+                        <p className="invisible">open website</p>
+                      </div>
+                      <div>
+                        <a href="https://github.com/viviannevilar/Django-project"><FaGithub className="fa-icon fa-4x black" /></a>
+                        <p className="invisible">git repository</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -228,9 +239,15 @@ function Projects() {
             <div className="skw-page__half skw-page__half--left overlay">
                 <div className="skw-page__skewed">
                   <div className="skw-page__content">
-                  <div className="icons">
-                      <a href="https://gofundshe.herokuapp.com/"><FaExternalLinkAlt className="fa-icon fa-4x crowd-white" /></a>
-                      <a href="https://github.com/viviannevilar/crowd-react"><FaGithub className="fa-icon fa-4x crowd-pink" /></a>
+                    <div className="icons">
+                      <div>
+                        <a href="https://gofundshe.herokuapp.com/"><FaExternalLinkAlt className="fa-icon fa-4x crowd-white" /></a>
+                        <p className="invisible"> open website</p>
+                      </div>  
+                      <div>
+                        <a href="https://github.com/viviannevilar/crowd-react"><FaGithub className="fa-icon fa-4x crowd-white" /></a> 
+                        <p className="invisible"> git repository</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -242,8 +259,10 @@ function Projects() {
               <div className="skw-page__skewed">
                 <div className="skw-page__content">
                   <Logo src={LogoCrowd} /> 
-                  <h2 id="crowd" className="skw-page__heading">Django REST + React</h2>
-              
+                  <h2 id="crowd" className="skw-page__heading">go fund she</h2>
+                  <div className="description crowd-white">
+                    <p>This is a crowdfunding website built using <span className="crowd-pink">Django REST Framework</span> for the backend and <span className="crowd-pink">React</span> for the front end. </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -261,8 +280,14 @@ function Projects() {
                       <h2 id="group-project" className="skw-page__heading">groupProject</h2>
                     </div>
                     <div className="icons">
-                      <a href="http://comparalist.herokuapp.com"><FaExternalLinkAlt className="fa-icon fa-4x group-project-gray" /></a>
-                      <a href="https://github.com/viviannevilar/group-react"><FaGithub className="fa-icon fa-4x group-project-gray" /></a>
+                      <div>
+                        <a href="http://comparalist.herokuapp.com"><FaExternalLinkAlt className="fa-icon fa-4x group-project-gray" /></a>
+                        <p className="invisible"> open website</p>
+                      </div>
+                      <div>
+                        <a href="https://github.com/viviannevilar/group-react"><FaGithub className="fa-icon fa-4x group-project-gray" /></a>
+                        <p className="invisible"> git repository</p>
+                      </div>
                     </div>
                     
                 </div>
@@ -302,7 +327,10 @@ function Projects() {
                   <div className="skw-page__content">
                     <div className="icons">
                       {/* want to wrap this in coleswrapper, need to find out how to send the component as props */}
+                      <div>
                       <a onClick={fileLink} href="#"><FaExternalLinkAlt className="fa-icon fa-4x coles-red" /></a>
+                      <p className="invisible">open file, see demo</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -332,7 +360,9 @@ function Projects() {
               <div className="skw-page__content django">
                   <Logo src={LogoSkewed}/> 
                   <h2 id="skewed"className="skw-page__heading fw-bold"> Portfolio </h2>
-
+                    <div className="description">
+                      <p className="skewed-green">This website uses code by <span className="skewed-purple">Nikolay Talanov</span> (right side panel) which constitutes of <span className="skewed-bright-white">Sass</span> and <span className="skewed-bright-white">Jquery</span>. I included his base code in a <span className="skewed-bright-white">React</span> app and modified it as needed. Although this is built in <span className="skewed-bright-white">React</span>, most of the work was done using <span className="skewed-yellow">CSS</span> and very little <span className="skewed-bright-white">Javascript</span> was used.</p>
+                    </div>
               </div>
             </div>
           </div>
@@ -349,12 +379,30 @@ function Projects() {
               <div className="skw-page__skewed">
                 <div className="skw-page__content">
                   <div className="icons">
-                    <a href="http://comparalist.herokuapp.com"><FaExternalLinkAlt className="fa-icon fa-4x skewed-white" /></a>
-                    <a href="https://github.com/viviannevilar/Django-project"><FaGithub className="fa-icon fa-4x skewed-white" /></a>
+                    <div>
+                      <a href="https://codepen.io/suez/pen/gadLre"><FaExternalLinkAlt className="fa-icon fa-4x skewed-white" /></a>
+                      <p className="invisible">open codepen</p>
+                    </div>
+                    <div>
+                      <a href="https://github.com/viviannevilar/portfolio-react"><FaGithub className="fa-icon fa-4x skewed-white" /></a>
+                      <p className="invisible"> git repository </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+
+            {/* filter not being used */}
+            {/* <svg>
+              <defs>
+              <filter id="colorize" color-interpolation-filters="sRGB">
+              <feColorMatrix type="matrix" values="0 0 0 0 .257
+                                              0 0 0 0 .257
+                                              0 0 0 0 .257
+                                              0 0 0 1 0"/>
+              </filter>
+              </defs>
+            </svg> */}
 
           </div>
 

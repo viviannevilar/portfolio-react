@@ -2,8 +2,8 @@ import logoIMG from "../images/Mee-crop.png"
 import styled from 'styled-components'
 
 const Logo = styled.img({
-  marginBottom: "3rem",
-  maxHeight: props => props.figHeight || "10rem",
+  marginBottom: "2rem",
+  maxHeight: props => props.figHeight || "8rem",
 })
 
   // backgroundColor: "transparent",
