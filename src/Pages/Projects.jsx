@@ -325,8 +325,11 @@ function Projects() {
             <div className="skw-page__half skw-page__half--right">
               <div className="skw-page__skewed coles-middle-wrap">
                 <div className="skw-page__content coles-inner-wrap">
-                  <ColesLogoWrapper logoID="logo-coles-img" />     
+                  <ColesLogoWrapper logoID="logo-coles-img" className="coles-logo"/>     
                   <h2 id="coles" className="skw-page__heading">collect data</h2>
+                  <div className="description">
+                    <p>In this <span className="white fw-bold">webscraping</span> project, I wrote an <span className="white fw-bold">AppleScript</span> program to get data from two large Australian retailers websites. The script opens Safari, directs Safari to the user page, changes location (to get price data from other capital cities), and records all data in a .csv file saved to desktop.</p>
+                  </div>
 
                 </div>
               </div>
@@ -347,13 +350,11 @@ function Projects() {
                   <h2 id="skewed"className="skw-page__heading fw-bold"> Portfolio </h2>
                 </div>
                     <div className="description">
-                      <p className="skewed-green">This website was built using the code by <span className="skewed-purple">Nikolay Talanov</span> (right side panel) as the base. His code is written in <span className="skewed-bright-white">Sass</span> and <span className="skewed-bright-white">Jquery</span>, two things I have little to no experience with. I included his base code and modified it as needed. 
+                      <p className="skewed-green">This website was built using the code by <span className="skewed-purple">Nikolay Talanov</span> (right side panel) as the base. His code is written in <span className="skewed-yellow">Sass</span> and <span className="skewed-yellow">Jquery</span>, two things I have little to no experience with. I wrapped <span className="skewed-purple">Nikolay</span>'s code in <span className="skewed-yellow">React</span> and modified and added as needed. 
                       
-                      I wrapped <span className="skewed-purple">Nikolay's</span> code in <span className="skewed-bright-white">React</span> and modified and added as needed. 
-                      
-                      I focused more on <span className="skewed-yellow">CSS</span> than <span className="skewed-bright-white">Javascript</span> on this project.</p>
-                      <p className="skewed-green">This project was the first time I really had fun with <span className="skewed-white">CSS</span>, and I am looking forward to many more hours spent this way!</p>
-                      <p className="skewed-green">I completed this design in a week, so of course there are many problems and ideas yet to be implemented. When I have time I plan on making this website mobile friendly, including a hamburger menu, and much more!</p>
+                      Here I focused more on <span className="skewed-bright-white">CSS</span> than on <span className="skewed-yellow">Javascript</span> </p>
+                      <p className="skewed-green">This project was the first time I really had fun with <span className="skewed-bright-white">CSS</span>, and I am looking forward to many more hours spent this way!</p>
+                      <p className="skewed-green">Next steps for this project are making it <span className="skewed-blue">mobile friendly</span>, adding a <span className="skewed-blue">hamburger menu</span>, including <span className="skewed-blue">more pages</span> and much more!</p>
                     </div>
               </div>
             </div>
@@ -419,12 +420,23 @@ function Projects() {
             <div className="skw-page__half skw-page__half--right">
               <div className="skw-page__skewed">
                 <div className="skw-page__content">
-                  <Logo />
+                  {/* <Logo /> */}
                   <h2 id="about-me" className="skw-page__heading">Vivianne Vilar</h2>
                   <div className="description">
-                    <p>Full Stack Developer. </p>
+                    <p>Full stack developer.</p>
 
-                    <p>Thank you for looking through my portfolio! </p>
+                    <div className="button-about-wrapper">
+                      <button className="button-about">Python</button>
+                      <button className="button-about">Django</button>
+                      <button className="button-about">Django REST</button>
+                      <button className="button-about">React</button>
+                      <button className="button-about">R</button>
+                      <button className="button-about">Applescript</button>
+                    </div>
+                  
+                    
+                    <p>Thank you for looking through my portfolio!</p>
+
                   </div>
                 </div>
               </div>
