@@ -18,6 +18,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 
+// About Me (page 7)
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+
+
 ////////////////// variables ////////////////// 
 :root {
   --black: black;
@@ -44,8 +50,11 @@
   --django-blue: cornflowerblue; //#6495ed
   --skewed-bright-white: #ffffff;
   --skewed-purple: #9a8297;
+  --my-pink: #ec1492;
+  --my-green: #46d68f;
+  --my-yellow: #fff3d6;
+  --my-gray: #4f514f;
 }
-
 
 .white { color: white;}
 .black { color: black;}
@@ -71,6 +80,10 @@
 .skewed-yellow { color: var(--skewed-yellow); }
 .skewed-bright-white { color: var(--skewed-bright-white);}
 .skewed-purple { color: var(--skewed-purple); }
+.my-pink { color: var(--my-pink); }
+.my-green { color: var(--my-green); }
+.my-yellow { color: var(--my-yellow); }
+.my-gray { color: var(--my-gray); }
 
 
 
@@ -108,6 +121,11 @@ body {
   font-weight: bold;
 }
 
+.title-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 .icons div {
   display: flex;
   justify-content: center;
@@ -326,6 +344,10 @@ $scrollTime: 1s;
         // padding: 0.4rem;
       }
 
+      .description p {
+        font-family: 'monospace';
+      }
+
       .description h3 {
         font-size: 2.5rem;
         background: white;
@@ -336,7 +358,6 @@ $scrollTime: 1s;
         margin: 0;
         border-radius: 1rem 1rem 0 0;
         text-align: center;    
-
     }
 
    }
@@ -422,7 +443,7 @@ $scrollTime: 1s;
       // }
 
       a:hover + p.invisible {
-        color: var(--coles-red);
+        color: black;
       }
       p.invisible {
         width: 10rem;
@@ -438,7 +459,6 @@ $scrollTime: 1s;
     .skw-page__half--right.bf-overlay .skw-page__content {
       background-image: url('./images/skewed-slide-2.png');
     }
-
     .skw-page__half--right .skw-page__skewed {
       border-left: 1rem solid #343642;
     }
@@ -464,6 +484,32 @@ $scrollTime: 1s;
       font-size: 0.9rem;
       line-height: 1.2rem;
     }
+
+   }
+
+   &-7 {
+    .skw-page__half--left .skw-page__content {
+       background-image: url('./images/MeMod.png');
+       max-height: 120vh;
+    }
+    .skw-page__half--right .skw-page__content {
+      //  padding: 0 20%;
+       //background: lighten(#191b1f, 0%);
+       background: var(--my-green);
+    }
+    .overlay-container:hover .bf-overlay {
+      // filter: contrast(calc(0.5)) brightness(0.8) blur(2px);
+      // webkit-filter: url(#colorize);
+      // filter: url(#colorize);
+    }
+    .overlay-container:hover .overlay {
+
+    }
+    a:hover + p.invisible {
+      // color: var(--crowd-white);
+    }
+
+
  }
 }
 
@@ -472,7 +518,7 @@ $scrollTime: 1s;
 //////////////////// <h2>s of each page ///////////////////
 // page 1 - python
 h2#python {
-  font-size: 6rem;
+  font-size: 4rem;
   padding: 0px;
   margin: 0px;
   margin: -0.5rem 0;
@@ -522,11 +568,11 @@ h2#coles {
   z-index: 100;
 }
 
-.coles-header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+h2#about-me {
+  font-family: 'Titan One', 'Indie+Flower', sans-serif;
+  color: var(--my-gray);
 }
+
 
 // page 6 - portfolio - skewed slides
 h2#skewed {

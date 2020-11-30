@@ -6,6 +6,8 @@ import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
 // components
 import ColesLogoWrapper from "../Components/ColesWrapper"
 import Logo from "../Components/Logo"
+import SvgPythonGraph from "../Components/SvgPythonGraph"
+// import SvgPythonGraph from "../Components/SvgPythonGraph.svg"
 
 // images
 import LogoGroup from "../images/MeGroup6.png"
@@ -124,7 +126,7 @@ function Projects() {
             <div className="skw-page__half skw-page__half--right">
               <div className="skw-page__skewed">
                 <div className="skw-page__content">
-                  <Logo src={LogoPython} figHeight="10rem"/> 
+                  <Logo src={LogoPython} figHeight="6rem"/> 
                   <h2 id="python" className="skw-page__heading rainbow-text">
                     Python
                     {/* <span className="light-blue">P</span>
@@ -134,34 +136,10 @@ function Projects() {
                     <span className="purple">o</span>
                     <span className="blue">n</span> */}
                   </h2>
-                  <div style={{width: "30rem", height: "18rem", marginTop: "2rem", marginLeft: "-8rem"}}>
-                  <svg width="100%" height="100%" fill="var(--python-black)">
 
+                  <div style={{width: "25.05rem", height: "15.8rem", marginTop: "2rem", marginLeft: "-4rem"}}>
 
-                    <defs>
-                      {/* <pattern id="smallGrid" width="8" height="8" patternUnits="userSpaceOnUse">
-                        <path d="M 8 0 L 0 0 0 8" fill="none" stroke="gray" strokeWidth="0.5"/>
-                      </pattern> */}
-                      <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
-                        <rect width="80" height="80" fill="url(#smallGrid)"/>
-                        <path d="M 80 0 L 0 0 0 80" fill="none" stroke="var(--python-gray)" strokeWidth="2"/>
-                      </pattern>
-                     </defs>
-
-                    <rect width="100%" height="100%" fill="url(#grid)" />
-
-                    <line x1="0" y1="0" x2="100" y2="100" style={{ stroke: "red", strokeWidth: "2"}}/> 
-                    <line x1="20" y1="20" x2="120" y2="20"
-                      style={{ stroke: "red", fill: "none",
-                      strokeWidth: "1.5px",
-                      strokeDasharray: "3 3"}}  />
-
-
-                    {/* <g fill="none" stroke="black" stroke-width="4">
-                      <path stroke-dasharray="5,5" d="M5 20 l215 0" />
-                      <path stroke-dasharray="10,10" d="M5 40 l215 0" />
-                    </g> */}
-                  </svg>
+                    <SvgPythonGraph />
                   </div>
 
                   {/* <div className="icons">
@@ -261,7 +239,7 @@ function Projects() {
                   <Logo src={LogoCrowd} /> 
                   <h2 id="crowd" className="skw-page__heading">go fund she</h2>
                   <div className="description crowd-white">
-                    <p>This is a crowdfunding website built using <span className="crowd-pink">Django REST Framework</span> for the backend and <span className="crowd-pink">React</span> for the front end. </p>
+                    <p>This is a crowdfunding website built using <span className="crowd-pink">Django REST Framework</span> for the back end and <span className="crowd-pink">React</span> for the front end. </p>
                   </div>
                 </div>
               </div>
@@ -275,7 +253,7 @@ function Projects() {
             <div className="skw-page__half skw-page__half--left">
               <div className="skw-page__skewed">
                 <div className="skw-page__content">
-                    <div className="coles-header">
+                    <div className="title-wrapper">
                       <Logo src={LogoGroup}/>
                       <h2 id="group-project" className="skw-page__heading">groupProject</h2>
                     </div>
@@ -329,7 +307,7 @@ function Projects() {
                       {/* want to wrap this in coleswrapper, need to find out how to send the component as props */}
                       <div>
                       <a onClick={fileLink} href="#"><FaExternalLinkAlt className="fa-icon fa-4x coles-red" /></a>
-                      <p className="invisible">open file, see demo</p>
+                      <p className="invisible black">open file, see demo</p>
                       </div>
                     </div>
                   </div>
@@ -358,10 +336,18 @@ function Projects() {
           <div className="skw-page__half skw-page__half--left">
             <div className="skw-page__skewed">
               <div className="skw-page__content django">
-                  <Logo src={LogoSkewed}/> 
+                <div className="title-wrapper">
+                  <Logo src={LogoSkewed} figHeight="5rem"/> 
                   <h2 id="skewed"className="skw-page__heading fw-bold"> Portfolio </h2>
+                </div>
                     <div className="description">
-                      <p className="skewed-green">This website uses code by <span className="skewed-purple">Nikolay Talanov</span> (right side panel) which constitutes of <span className="skewed-bright-white">Sass</span> and <span className="skewed-bright-white">Jquery</span>. I included his base code in a <span className="skewed-bright-white">React</span> app and modified it as needed. Although this is built in <span className="skewed-bright-white">React</span>, most of the work was done using <span className="skewed-yellow">CSS</span> and very little <span className="skewed-bright-white">Javascript</span> was used.</p>
+                      <p className="skewed-green">This website was built using the code by <span className="skewed-purple">Nikolay Talanov</span> (right side panel) as the base. His code is written in <span className="skewed-bright-white">Sass</span> and <span className="skewed-bright-white">Jquery</span>, two things I have little to no experience with. I included his base code and modified it as needed. 
+                      
+                      I wrapped <span className="skewed-purple">Nikolay's</span> code in <span className="skewed-bright-white">React</span> and modified and added as needed. 
+                      
+                      I focused more on <span className="skewed-yellow">CSS</span> than <span className="skewed-bright-white">Javascript</span> on this project.</p>
+                      <p className="skewed-green">This project was the first time I really had fun with <span className="skewed-white">CSS</span>, and I am looking forward to many more hours spent this way!</p>
+                      <p className="skewed-green">I completed this design in a week, so of course there are many problems and ideas yet to be implemented. When I have time I plan on making this website mobile friendly, including a hamburger menu, and much more!</p>
                     </div>
               </div>
             </div>
@@ -392,6 +378,8 @@ function Projects() {
               </div>
             </div>
 
+
+
             {/* filter not being used */}
             {/* <svg>
               <defs>
@@ -407,14 +395,36 @@ function Projects() {
           </div>
 
 
+
+
+
+          </div>
+
+
+          {/* Page 7 -  */}
+          <div className="skw-page skw-page-7">
+
+              <div className="skw-page__half skw-page__half--left">
+                <div className="skw-page__skewed">
+                  <div className="skw-page__content"></div>
+                </div>
+              </div>
+
+            <div className="skw-page__half skw-page__half--right">
+              <div className="skw-page__skewed">
+                <div className="skw-page__content">
+                  <Logo />
+                  <h2 id="about-me" className="skw-page__heading">Vivianne Vilar</h2>
+                </div>
+              </div>
+            </div>
+
           </div>
 
 
 
 
-
-
-
+          {/* those are the end of the divs enclosing the pages. Need 3 divs after this comment */}
 
         </div>
       </div>
