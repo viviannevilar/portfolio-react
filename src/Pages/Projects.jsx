@@ -7,7 +7,7 @@ import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
 import ColesLogoWrapper from "../Components/ColesWrapper"
 import Logo from "../Components/Logo"
 import SvgPythonGraph from "../Components/SvgPythonGraph"
-// import SvgPythonGraph from "../Components/SvgPythonGraph.svg"
+// import SvgPythonPic from "../Components/SvgPythonPic.svg"
 
 // images
 import LogoGroup from "../images/MeGroup6.png"
@@ -137,9 +137,15 @@ function Projects() {
                     <span className="blue">n</span> */}
                   </h2>
 
-                  <div style={{width: "25.05rem", height: "15.8rem", marginTop: "2rem", marginLeft: "-4rem"}}>
+                  <div  className="description python-overlay-container" style={{width: "25.05rem", height: "15.8rem", marginTop: "2rem", marginLeft: "-4rem"}}>
+                    <div id="python-svg">
+                      <SvgPythonGraph />
+                    </div>
+                    <div id="python-overlay">
+                      <p>Python blah blah blah</p>
+                    </div>
+                             
 
-                    <SvgPythonGraph />
                   </div>
 
                   {/* <div className="icons">
@@ -415,6 +421,11 @@ function Projects() {
                 <div className="skw-page__content">
                   <Logo />
                   <h2 id="about-me" className="skw-page__heading">Vivianne Vilar</h2>
+                  <div className="description">
+                    <p>Full Stack Developer. </p>
+
+                    <p>Thank you for looking through my portfolio! </p>
+                  </div>
                 </div>
               </div>
             </div>

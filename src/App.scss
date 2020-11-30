@@ -85,9 +85,6 @@
 .my-yellow { color: var(--my-yellow); }
 .my-gray { color: var(--my-gray); }
 
-
-
-
 .fw-bold { font-weight: bold; }
 .fw-normal { font-weight: normal; }
 
@@ -133,6 +130,12 @@ body {
   flex-direction: column;
 }
 
+
+#python-svg {
+  // background-image: url('./Components/SvgPythonPic.svg')
+}
+
+
 // legend below icons in hover
 p.invisible {
   visibility: hidden;
@@ -167,6 +170,29 @@ a:hover + p.invisible {
   filter: contrast(calc(0.5)) brightness(1);
  //filter: contrast(calc(0.5/1.5)) brightness(1.5);
 }
+
+.python-overlay-container {
+  position: relative;
+
+}
+
+#python-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.python-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+  z-index: 10;
+}
+
+
 
 
 ////////////////// skw-pages-code ////////////////// 
@@ -266,7 +292,6 @@ $scrollTime: 1s;
       text-transform: capitalize;
       font-size: 4rem;
       text-align: center;
-      // border: 1px solid red;
    }
 
    &__description {
@@ -493,7 +518,7 @@ $scrollTime: 1s;
        max-height: 120vh;
     }
     .skw-page__half--right .skw-page__content {
-      //  padding: 0 20%;
+      padding: 0 20%;
        //background: lighten(#191b1f, 0%);
        background: var(--my-green);
     }
@@ -507,6 +532,12 @@ $scrollTime: 1s;
     }
     a:hover + p.invisible {
       // color: var(--crowd-white);
+    }
+    .description p {
+      color: var(--my-gray);
+      font-family: Monaco, monospace;
+      font-size: 0.9rem;
+      line-height: 1.2rem;
     }
 
 
@@ -571,6 +602,10 @@ h2#coles {
 h2#about-me {
   font-family: 'Titan One', 'Indie+Flower', sans-serif;
   color: var(--my-gray);
+  font-size: 3rem;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  width: 100%;
 }
 
 
@@ -641,7 +676,7 @@ h2#skewed {
 
 a#github-python {
   // background-color: var(--python-pink);
-  padding: 1rem;
+  //padding: 1rem;
   // border-radius: 3rem;
   // border: 1px solid var(--python-bright-pink);
   
