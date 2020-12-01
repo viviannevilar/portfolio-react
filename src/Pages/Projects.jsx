@@ -1,5 +1,5 @@
 ////////////////// imports ///////////////////
-import React, { useState } from "react";
+import React from "react";
 import $ from 'jquery';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
 
@@ -19,7 +19,7 @@ import LogoSkewed from "../images/MeSkewed2.png"
 
 /////////////////////// main function ////////////////////
 function Projects() {
-  const [ buttonClicked, setButtonClicked ] = useState("none")
+  // const [ buttonClicked, setButtonClicked ] = useState("none")
 
   // Jquery
   $(document).ready(function() {
@@ -53,7 +53,7 @@ function Projects() {
       pagination();
     };
   
-    $(document).on("mousewheel DOMMouseScroll ontouchstart", function(e) {
+    $(document).on("mousewheel DOMMouseScroll ontouchstart ", function(e) {
       if (scrolling) return;
       if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
         navigateUp();
@@ -87,12 +87,11 @@ function Projects() {
 
 }
 
-console.log(buttonClicked)
 
-function clickButton(buttonName) {
-  console.log("inside function", buttonClicked)
-  setButtonClicked(buttonName);  
-}
+// function clickButton(buttonName) {
+//   console.log("inside function", buttonClicked)
+//   setButtonClicked(buttonName);  
+// }
 
   return (
     <div>
@@ -437,7 +436,8 @@ function clickButton(buttonName) {
                       <button className="button-about">Django REST</button>
                       <button className="button-about">React</button>
                       <button className="button-about">R</button>
-                      <button onClick={clickButton("button6")} className={`"button-about" ${buttonClicked === "button6" ? "button-active" : ""}`}>{buttonClicked === "button6" ? "Not a real button!" : "Applescript"}</button>
+                      <button className="button-about">Applescript</button>
+                      {/* <button onClick={clickButton("button6")} className={`"button-about" ${buttonClicked === "button6" ? "button-active" : ""}`}>{buttonClicked === "button6" ? "Not a real button!" : "Applescript"}</button> */}
                     </div>
                   
                     
