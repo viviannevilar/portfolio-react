@@ -452,8 +452,17 @@ function Projects() {
 
 
       <div className="mobile-version">
-        TEST
+        <div className="logo-mobile">
+          <Logo figHeight="8rem"/>
+        </div>
+        <h2>Vivianne Vilar</h2>
+        <p>Thanks for stopping by! Unfortunately this website does not have a mobile version yet. Please open on a desktop computer! </p>
+        <p>In the meantime, you can have a look at my github repository:</p>
+        <div className="logo-mobile">
+          <a href="https://github.com/viviannevilar/"><FaGithub className="fa-icon fa-icon-mobile my-gray" /></a>
+        </div>
 
+        
       </div>
 
     </div>

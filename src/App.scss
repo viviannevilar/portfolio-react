@@ -105,9 +105,7 @@
 
 $openSans: 'Open Sans', Helvetica, Arial, sans-serif;
 
-.mobile-version {
-  display: none;
-}
+
 
 body {
    background:#15181A;
@@ -175,7 +173,38 @@ body {
 }
 
 
+// mobile version
+.mobile-version {
+  display: none;
+  background-color: var(--my-green);
+  padding: 2rem;
+  height: 100vh;
+  width: 100vw;
+  color: var(--my-gray);
+}
 
+.mobile-version p {
+  color: var(--my-gray);
+  font-size: 1.3rem;
+  font-family: 'Indie Flower';
+  margin: 1rem 0;
+}
+
+.mobile-version h2 {
+  font-family: 'Titan One', sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.logo-mobile {
+  display: flex;
+  justify-content: center;
+}
+
+.fa-icon-mobile {
+  font-size: 4rem;
+}
 
 
 
@@ -810,14 +839,6 @@ a#fa-file-coles {
 }
 
 // id="github-python
-
-
-@media only screen and (max-width: 950px) {
-  .App {
-    display: none;
-  }
-
-} 
 
 
 @media (pointer:coarse) {
