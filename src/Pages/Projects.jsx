@@ -88,10 +88,8 @@ function Projects() {
 
   return (
     <div>
-
       {/* Crooked projects page */}
       <div className="App">
-
         {/* ********* Python - Page 1 ********* */}
         {/*          ******************         */}
         <div className="skw-pages">
@@ -328,7 +326,7 @@ function Projects() {
                   <ColesLogoWrapper logoID="logo-coles-img" className="coles-logo"/>     
                   <h2 id="coles" className="skw-page__heading">collect data</h2>
                   <div className="description">
-                    <p>In this <span className="white fw-bold">webscraping</span> project, I wrote an <span className="white fw-bold">AppleScript</span> program to get data from two large Australian retailers websites. The script opens Safari, directs Safari to the user page, changes location (to get price data from other capital cities), and records all data in a .csv file saved to desktop.</p>
+                    <p>In this <span className="white fw-bold">webscraping</span> project, I wrote an <span className="white fw-bold">AppleScript</span> program to get data from two large Australian retailers websites. The script linked on the right is for Coles' website. Once you run the script, it opens Safari, directs Safari to Coles' website, changes location (to get price data from other capital cities), and records all data in a .csv file saved to desktop.</p>
                   </div>
 
                 </div>
@@ -450,6 +448,12 @@ function Projects() {
           {/* those are the end of the divs enclosing the pages. Need 3 divs after this comment */}
 
         </div>
+      </div>
+
+
+      <div className="mobile-version">
+        TEST
+
       </div>
 
     </div>

@@ -105,6 +105,10 @@
 
 $openSans: 'Open Sans', Helvetica, Arial, sans-serif;
 
+.mobile-version {
+  display: none;
+}
+
 body {
    background:#15181A;
    font-family: $openSans;
@@ -152,7 +156,7 @@ body {
   font-family: 'Titan One';
   font-size: 1.5em;
   padding: 0.2em 0.3em;
-  min-width: 7em;
+  min-width: 7.3em;
   margin-bottom: 1rem;
 }
 
@@ -808,3 +812,19 @@ a#fa-file-coles {
 // id="github-python
 
 
+@media only screen and (max-width: 950px) {
+  .App {
+    display: none;
+  }
+
+} 
+
+
+@media (pointer:coarse) {
+  .App {
+    display: none;
+  }
+  .mobile-version {
+    display: block;
+  }
+}
