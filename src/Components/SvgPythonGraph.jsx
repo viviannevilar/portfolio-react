@@ -14,7 +14,7 @@ function SvgPythonGraph() {
           </pattern> */}
           <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
             <rect width="50" height="50" fill="url(#smallGrid)"/>
-            <path d="M 50 0 L 0 0 0 50" fill="none" stroke="var(--python-gray)" strokeWidth="2"/>
+            <path d="M 50 0 L 0 0 0 50" fill="none" stroke="var(--python-gray)" strokeWidth="3"/>
           </pattern>
         </defs>
 

@@ -1,5 +1,5 @@
 ////////////////// imports ///////////////////
-import React from "react";
+import React, { useState } from "react";
 import $ from 'jquery';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
 
@@ -19,6 +19,7 @@ import LogoSkewed from "../images/MeSkewed2.png"
 
 /////////////////////// main function ////////////////////
 function Projects() {
+  const [ buttonClicked, setButtonClicked ] = useState("none")
 
   // Jquery
   $(document).ready(function() {
@@ -52,7 +53,7 @@ function Projects() {
       pagination();
     };
   
-    $(document).on("mousewheel DOMMouseScroll", function(e) {
+    $(document).on("mousewheel DOMMouseScroll ontouchstart", function(e) {
       if (scrolling) return;
       if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
         navigateUp();
@@ -84,6 +85,13 @@ function Projects() {
     
   //   alert("Share this collection with others - your collection URL was copied to your clipboard!")
 
+}
+
+console.log(buttonClicked)
+
+function clickButton(buttonName) {
+  console.log("inside function", buttonClicked)
+  setButtonClicked(buttonName);  
 }
 
   return (
@@ -169,7 +177,7 @@ function Projects() {
                     <h2 id="django" className="skw-page__heading fw-bold">{"{SheCodes} News"}</h2>
                     <div className="description black">
                       <h3>Django</h3>
-                    <p>My first <span className="white">Django</span> project, this news website allows registered users to post stories. Users can also like and favourite stories and see them in their profile. 
+                    <p>My first <span className="white">Django</span> project, this website is a newspaper style website which allows registered users to post stories, like and favourite stories and see them in their profile. 
                     </p>
                   </div>
 
@@ -326,7 +334,7 @@ function Projects() {
                   <ColesLogoWrapper logoID="logo-coles-img" className="coles-logo"/>     
                   <h2 id="coles" className="skw-page__heading">collect data</h2>
                   <div className="description">
-                    <p>In this <span className="white fw-bold">webscraping</span> project, I wrote an <span className="white fw-bold">AppleScript</span> program to get data from two large Australian retailers websites. The script linked on the right is for Coles' website. Once you run the script, it opens Safari, directs Safari to Coles' website, changes location (to get price data from other capital cities), and records all data in a .csv file saved to desktop.</p>
+                    <p>For this <span className="white fw-bold">webscraping</span> project, I wrote an <span className="white fw-bold">AppleScript</span> program to get data from two large Australian retailers websites. The script linked on the right is for Coles' website. Once you run the script, it opens Safari, directs Safari to Coles' website, changes location (to get price data from other capital cities), and records all data in a .csv file saved to desktop.</p>
                   </div>
 
                 </div>
@@ -429,7 +437,7 @@ function Projects() {
                       <button className="button-about">Django REST</button>
                       <button className="button-about">React</button>
                       <button className="button-about">R</button>
-                      <button className="button-about">Applescript</button>
+                      <button onClick={clickButton("button6")} className={`"button-about" ${buttonClicked === "button6" ? "button-active" : ""}`}>{buttonClicked === "button6" ? "Not a real button!" : "Applescript"}</button>
                     </div>
                   
                     
