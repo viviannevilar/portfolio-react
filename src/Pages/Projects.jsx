@@ -223,7 +223,7 @@ const TITLE = 'Vivianne Vilar'
                   <div className="skw-page__content">
                     <div className="icons">
                       <div>
-                        <a href="http://localhost:8000/"><FaExternalLinkAlt className="fa-icon fa-4x black" /></a>
+                        <a href="http://localhost:8000/news"><FaExternalLinkAlt className="fa-icon fa-4x black" /></a>
                         <p className="invisible">open website</p>
                       </div>
                       <div>
