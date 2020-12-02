@@ -122,7 +122,7 @@ body {
 
 .description {
   font-size: 1rem;
-  margin-top: 2rem;
+  margin-top: 0.5rem;
 }
 .description p {
   padding: 0.5rem;
@@ -276,7 +276,7 @@ a:hover + p.invisible {
   font-size: 1.2rem;
   margin: auto 0;
   padding: 0.6rem;
-  margin-top: 0.4rem;
+  // margin-top: 0.2rem;
 }
 
 
@@ -423,7 +423,7 @@ $scrollTime: 1s;
 
       .python-overlay-container {
         width: 25.05rem; 
-        height: 15.85rem; 
+        height: 18rem; 
         margin-top: 2rem; 
         margin-left: -4rem;
       }
@@ -694,7 +694,7 @@ h2#python {
 
 h2#django {
   font-weight: bold;
-  font-size: 4rem;
+  font-size: 3.5rem;
   margin-block-start: 0em;
   margin-block-end: 0em;
   width: 100%;

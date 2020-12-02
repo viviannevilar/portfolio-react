@@ -164,8 +164,9 @@ const TITLE = 'Vivianne Vilar'
                     </div>
                     <div id="python-overlay">
                       <div>
-                      <p>Welcome to my portfolio!</p>
-                      <p> This page is dedicated to my <span className="python-pink">SheCodes</span> <span className="python-dark-blue">python</span> project. On the left you can see some of the graphs that I created as part of this project (the fake graph under this text was done using SVG).
+                      <p>Welcome to my portfolio! Here you will see the projects which were part of my <span className="python-pink">SheCodes</span> journey.</p> 
+                      
+                      <p>This first page you are seeing now is dedicated to my <span className="python-pink">python</span> project. On the left you can see some of the graphs that I created as part of this project. The fake graph under this text was done using SVG.
                       </p>
                        {/* <p> If you hover the mouse over the left hand side panel, you will see a link to see the files in my git repository. You can also ask me to show you how they work (so no, the button on the left called "ask" doesn't do anything!). </p>   */}
                       
@@ -277,8 +278,9 @@ const TITLE = 'Vivianne Vilar'
                     <h2 id="crowd" className="skw-page__heading">go fund she</h2>
                   </div>
                   <div className="description crowd-white">
-                    <p>This is a crowdfunding website built using <span>Django REST Framework</span> for the back end and <span>React</span> for the front end. </p>
-                    <p>This was my first React project, after having gone through <span>CSS</span>, <span>HTML</span>, <span>Python</span>, <span>Django</span> and <span>Django REST Framework</span>. I was getting a little tired to give up what I was enjoying to learn something completely new! I wanted to be able to savour what I had learned and get better at it instead of jumping to the next thing!</p>
+                    <p>This is a crowdfunding website built using <span>Django REST</span> for the back end and <span>React</span> for the front end. </p>
+                    <p>Registered users can post new projects, make pledge to other people's projects, see their profile and much more!</p>
+                    <p>This was my first time using both <span>React</span> and <span>Django REST</span>, and I think I didn't give <span>CSS</span> enough attention nor was I careful about bugs and problems. I think I was a bit run down at this point, but the next project was exactly what I needed!</p>
                   </div>
                 </div>
               </div>
