@@ -42,6 +42,9 @@
   --coles-red: #e01a22;
   --coles-gray: #262626;
   --python-gray: #1a1f25;
+  --python-white: #898b8d;// #dddee1;
+  --python-dark-blue: #26376e;
+  --python-red: #720f0c;
   --crowd-gray: #343434;
   --crowd-pink: #eea489;
   --crowd-white: #f4f4f4;
@@ -72,6 +75,9 @@
 .group-project-blue { color: #004aad;}
 .group-project-gray { color: #b3b7a4;}
 .python-black { color: var(--python-black);}
+.python-white { color: var(--python-white);}
+.python-dark-blue { color: var(--python-blue);}
+.python-red { color: var(--python-black); }
 .coles-red { color: var(--coles-red);}
 .coles-gray { color: var(--coles-gray);}
 .crowd-pink { color: var(--crowd-pink);}
@@ -139,9 +145,7 @@ body {
 }
 
 
-#python-svg {
-  // background-image: url('./Components/SvgPythonPic.svg')
-}
+
 
 
 //page 7 (me) button
@@ -246,7 +250,6 @@ a:hover + p.invisible {
 
 .python-overlay-container {
   position: relative;
-
 }
 
 #python-svg {
@@ -262,12 +265,15 @@ a:hover + p.invisible {
   top: 0;
   left: 0;
   background: transparent;
-  color: white;
+  color: var(--python-white);
   // z-index: 10;
   font-family: "Open Sans";
+  // padding: 0 0.6rem;
+  font-size: 1.2rem;
+  margin: auto 0;
+  padding: 0.6rem;
+  margin-top: 0.4rem;
 }
-
-
 
 
 ////////////////// skw-pages-code ////////////////// 
@@ -409,6 +415,19 @@ $scrollTime: 1s;
         color: var(--python-black);
       }
 
+      .python-overlay-container {
+        width: 25.05rem; 
+        height: 25.05rem; 
+        margin-top: 2rem; 
+        margin-left: -4rem;
+      }
+
+      .description {
+
+      }
+
+      // styles={{  width= "25.05rem", height= "15.8rem", marginTop= "2rem", marginLeft= "-4rem"}}
+
    }
    &-2 {
       .skw-page__half--left .skw-page__content {
@@ -481,6 +500,10 @@ $scrollTime: 1s;
       }
       a:hover + p.invisible {
         color: var(--crowd-white);
+      }
+
+      .description span {
+        color: var(--crowd-pink);
       }
    }
    &-4 {
@@ -791,42 +814,6 @@ a#fa-file-coles {
   // border: 0.3rem solid blue;
 }
 
-
-
-
-
-////////////////////// logo coles ////////////////////
-
-// #logo-coles-wrap {
-//   width:100%;
-//   margin: 0 auto;
-// }
-
-// #logo-coles {
-//   background-color: white;
-//   height: 10rem;
-//   width: 10rem;
-//   display: flex;
-//   // align-content: center;
-//   justify-content: center;
-//   align-items: center;
-//   border-radius: 5rem;
-//   margin: 0 auto;
-
-// }
-
-// #logo-coles-ring {
-//   border: 1rem solid var(--coles-red);
-//   height: 9.4rem;
-//   width: 9.4rem;
-//   border-radius: 6.2rem;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-
-// }
-
-
 .logo-coles img {
   object-fit: cover;
   // height: 4rem;
@@ -837,7 +824,6 @@ a#fa-file-coles {
   margin-right: 0.7rem;
   height: 5rem;
   max-height: 5rem;
-  
 }
 
 // id="github-python

@@ -1,12 +1,13 @@
 ////////////////// imports ///////////////////
 import React from "react";
 import $ from 'jquery';
-import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
+import { FaExternalLinkAlt, FaGithub, FaSpeakap, FaCircle } from 'react-icons/fa'
 
 // components
 import ColesLogoWrapper from "../Components/ColesWrapper"
 import Logo from "../Components/Logo"
 import SvgPythonGraph from "../Components/SvgPythonGraph"
+import IconStack from "../Components/IconStack"
 // import SvgPythonPic from "../Components/SvgPythonPic.svg"
 
 // images
@@ -20,6 +21,8 @@ import LogoSkewed from "../images/MeSkewed2.png"
 /////////////////////// main function ////////////////////
 function Projects() {
   // const [ buttonClicked, setButtonClicked ] = useState("none")
+
+
 
   // Jquery
   $(document).ready(function() {
@@ -74,18 +77,21 @@ function Projects() {
   })
 
 
-  function fileLink(e) {
-    e.preventDefault();
+  function fileLink() {
+    alert("Sorry, this button doesn't do anything! Ask me, I will be happy to show you!")
+  }
+  // function fileLink(e) {
+  //   e.preventDefault();
 
-    const linkText = "file://///Users/viviannevilar/Projects/WebScraper/Coles/ColesFinalShort.scpt" 
+  //   const linkText = "file://///Users/viviannevilar/Projects/WebScraper/Coles/ColesFinalShort.scpt" 
 
-    navigator.clipboard.writeText(linkText).then(function() {
-       alert("URL copied to clipboard. Paste it in a new tab to open the file and see a live demo!")
-    })
+  //   navigator.clipboard.writeText(linkText).then(function() {
+  //      alert("URL copied to clipboard. Paste it in a new tab to open the file and see a live demo!")
+  //   })
     
   //   alert("Share this collection with others - your collection URL was copied to your clipboard!")
 
-}
+//}
 
 
 // function clickButton(buttonName) {
@@ -131,23 +137,24 @@ function Projects() {
             <div className="skw-page__half skw-page__half--right">
               <div className="skw-page__skewed">
                 <div className="skw-page__content">
+                <div className="title-wrapper">
                   <Logo src={LogoPython} figHeight="6rem"/> 
-                  <h2 id="python" className="skw-page__heading rainbow-text">
-                    Python
-                    {/* <span className="light-blue">P</span>
-                    <span className="red">y</span>
-                    <span className="orange">t</span>
-                    <span className="green">h</span>
-                    <span className="purple">o</span>
-                    <span className="blue">n</span> */}
-                  </h2>
+                  <h2 id="python" className="skw-page__heading rainbow-text"> Python </h2>
+                  </div>
 
-                  <div  className="description python-overlay-container" style={{width: "25.05rem", height: "15.8rem", marginTop: "2rem", marginLeft: "-4rem"}}>
+                  <div  className="description python-overlay-container" >
                     <div id="python-svg">
                       <SvgPythonGraph />
                     </div>
                     <div id="python-overlay">
-                      <p>Python blah blah blah</p>
+                      <div>
+                      <p>Welcome to my portfolio! This page is dedicated to my SheCodes python project. </p>                        
+                        <p>On the left you can see some of the graphs that I created as part of this project. </p>
+                       <p> The fake graph under this paragraph was created using SVG.</p>
+                       <p> If you hover the mouse over the left hand side panel, you will see a link to see the files in my git repository. You can also ask me to show you how they work (so no, the button on the left called "ask" doesn't do anything!). </p>  
+                      
+                      <p>When you are ready, you can use the trackpad to slide two fingers up and see the next page!</p>
+                      </div>
                     </div>
                              
 
@@ -250,7 +257,8 @@ function Projects() {
                   <Logo src={LogoCrowd} /> 
                   <h2 id="crowd" className="skw-page__heading">go fund she</h2>
                   <div className="description crowd-white">
-                    <p>This is a crowdfunding website built using <span className="crowd-pink">Django REST Framework</span> for the back end and <span className="crowd-pink">React</span> for the front end. </p>
+                    <p>This is a crowdfunding website built using <span>Django REST Framework</span> for the back end and <span>React</span> for the front end. </p>
+                    <p>This was my first React project, after having gone through <span>CSS</span>, <span>HTML</span>, <span>Python</span>, <span>Django</span> and <span>Django REST Framework</span>. I was getting a little tired to give up what I was enjoying to learn something completely new! I wanted to be able to savour what I had learned and get better at it instead of jumping to the next thing!</p>
                   </div>
                 </div>
               </div>
@@ -317,8 +325,14 @@ function Projects() {
                     <div className="icons">
                       {/* want to wrap this in coleswrapper, need to find out how to send the component as props */}
                       <div>
-                      <a onClick={fileLink} href="#"><FaExternalLinkAlt className="fa-icon fa-4x coles-red" /></a>
-                      <p className="invisible black">open file, see demo</p>
+                          <a onClick={fileLink} href="#"><FaSpeakap className="fa-icon fa-4x coles-red" /></a>
+ 
+                          {/* <IconStack>
+                          <FaCircle className="fa-icon fa-4x black" size={'4rem'}/>
+                          <FaSpeakap className="fa-icon fa-4x coles-red" size={'3rem'}/>
+                        </IconStack> */}
+                      
+                      <p className="invisible black">ask me to give you a demo!</p>
                       </div>
                     </div>
                   </div>
