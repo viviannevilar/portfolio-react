@@ -84,6 +84,10 @@ const TITLE = 'Vivianne Vilar'
   function fileLink() {
     alert("Sorry, this button doesn't do anything! Ask me, I will be happy to show you!")
   }
+
+  function alertButton() {
+    alert("This button doesn't do anything, but have fun clicking away!")
+  }
   // function fileLink(e) {
   //   e.preventDefault();
 
@@ -105,8 +109,6 @@ const TITLE = 'Vivianne Vilar'
 
   return (
     <div>
-
-
         <Helmet>
           <title>{ TITLE }</title>
         </Helmet>
@@ -131,11 +133,15 @@ const TITLE = 'Vivianne Vilar'
                 <div className="skw-page__skewed">
                   <div className="skw-page__content">
                     <div className="icons">
-                      <div className="icon-wrapper">
+                        <div>
                         <a id="github-python" href="https://github.com/viviannevilar/Python-project"><FaGithub id="python" className="fa-icon fa-4x python-black" /></a>
                         <p className="invisible">git repository</p>
+                        </div>
+                        <div>
+                        <a onClick={fileLink} href="#"><FaSpeakap className="fa-icon fa-4x python-black" /></a>
+                        <p className="invisible">ask me for a demo!</p>
+                        </div>
                       </div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -158,10 +164,10 @@ const TITLE = 'Vivianne Vilar'
                     </div>
                     <div id="python-overlay">
                       <div>
-                      <p>Welcome to my portfolio! This page is dedicated to my SheCodes python project. </p>                        
-                        <p>On the left you can see some of the graphs that I created as part of this project. </p>
-                       <p> The fake graph under this paragraph was created using SVG.</p>
-                       <p> If you hover the mouse over the left hand side panel, you will see a link to see the files in my git repository. You can also ask me to show you how they work (so no, the button on the left called "ask" doesn't do anything!). </p>  
+                      <p>Welcome to my portfolio!</p>
+                      <p> This page is dedicated to my <span className="python-pink">SheCodes</span> <span className="python-dark-blue">python</span> project. On the left you can see some of the graphs that I created as part of this project (the fake graph under this text was done using SVG).
+                      </p>
+                       {/* <p> If you hover the mouse over the left hand side panel, you will see a link to see the files in my git repository. You can also ask me to show you how they work (so no, the button on the left called "ask" doesn't do anything!). </p>   */}
                       
                       <p>When you are ready, you can use the trackpad to slide two fingers up and see the next page!</p>
                       </div>
@@ -287,7 +293,7 @@ const TITLE = 'Vivianne Vilar'
               <div className="skw-page__skewed">
                 <div className="skw-page__content">
                     <div className="title-wrapper">
-                      <Logo src={LogoGroup}/>
+                      <Logo src={LogoGroup} figHeight="6rem"/>
                       <h2 id="group-project" className="skw-page__heading">groupProject</h2>
                     </div>
 
@@ -487,12 +493,12 @@ const TITLE = 'Vivianne Vilar'
                     <p>Full stack developer.</p>
 
                     <div className="button-about-wrapper">
-                      <button className="button-about">Python</button>
-                      <button className="button-about">Django</button>
-                      <button className="button-about">Django REST</button>
-                      <button className="button-about">React</button>
-                      <button className="button-about">R</button>
-                      <button className="button-about">Applescript</button>
+                      <button onClick={alertButton} className="button-about">Python</button>
+                      <button onClick={alertButton}className="button-about">Django</button>
+                      <button onClick={alertButton}className="button-about">Django REST</button>
+                      <button onClick={alertButton}className="button-about">React</button>
+                      <button onClick={alertButton}className="button-about">R</button>
+                      <button onClick={alertButton}className="button-about">Applescript</button>
                       {/* <button onClick={clickButton("button6")} className={`"button-about" ${buttonClicked === "button6" ? "button-active" : ""}`}>{buttonClicked === "button6" ? "Not a real button!" : "Applescript"}</button> */}
                     </div>
                   

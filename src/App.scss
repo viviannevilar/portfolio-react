@@ -71,6 +71,7 @@
 .purple { color: #ab63fa;}
 .blue { color: #636efb;}
 .python-bright-pink { color: #d60dd5;}
+.python-dark-blue { color: var(--python-dark-blue);}
 .python-pink { color: #881988; }
 .group-project-blue { color: #004aad;}
 .group-project-gray { color: #b3b7a4;}
@@ -160,6 +161,7 @@ body {
   padding: 0.2em 0.3em;
   min-width: 7.3em;
   margin-bottom: 1rem;
+  outline:none; 
 }
 
 .button-about:hover {
@@ -169,12 +171,14 @@ body {
   color: var(--my-gray);
 }
 
+
 .button-about-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 2rem 0;
 }
+
 
 
 // mobile version
@@ -419,7 +423,7 @@ $scrollTime: 1s;
 
       .python-overlay-container {
         width: 25.05rem; 
-        height: 25.05rem; 
+        height: 15.85rem; 
         margin-top: 2rem; 
         margin-left: -4rem;
       }
@@ -716,7 +720,8 @@ h2#group-project {
   // text-transform: none;
   color: var(--group-project-blue);
   font-weight: normal;
-  font-size: 3.2rem;
+  font-size: 2.5rem;
+  margin-left: 1rem;
 }
 
 // page 5 - coles webscraping
@@ -781,6 +786,7 @@ h2#skewed {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: flex-start;
   // margin: auto;
 }
 
