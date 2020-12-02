@@ -189,12 +189,14 @@ const TITLE = 'Vivianne Vilar'
             <div className="skw-page__half skw-page__half--left">
               <div className="skw-page__skewed">
                 <div className="skw-page__content django">
-                    <Logo src={LogoDjango}/> 
-                    <h2 id="django" className="skw-page__heading fw-bold">{"{SheCodes} News"}</h2>
-                    <div className="description black">
-                      <h3>Django</h3>
-                    <p>This project is how I learned <span className="white">Django</span> and fell in love with it!</p>
-                    <p>The website consists of a newspaper style website which allows registered users to post stories, like and favourite stories and see them in their profile. Stories have categories, and visitors can filter stories by category and also search stories for particular words and expressions. </p>
+                  <div className="title-wrapper">
+                    <Logo src={LogoDjango} figHeight="6rem"/> 
+                    <h2 id="django" className="skw-page__heading fw-bold">Django</h2>
+                  </div>
+
+                    <div className="description white">
+                    <p>This project is how I learned <span className="django-blue fw-bold">Django</span> and fell in love with it!</p>
+                    <p>The website consists of a newspaper style website which allows registered users to post stories, like and favourite stories and see them in their profile. Visitors can filter stories by category and also search stories for particular words and expressions.</p>
                   </div>
 
                 </div>
@@ -264,8 +266,10 @@ const TITLE = 'Vivianne Vilar'
             <div className="skw-page__half skw-page__half--right">
               <div className="skw-page__skewed">
                 <div className="skw-page__content">
-                  <Logo src={LogoCrowd} /> 
-                  <h2 id="crowd" className="skw-page__heading">go fund she</h2>
+                  <div className="title-wrapper">
+                  <Logo src={LogoCrowd} figHeight="6rem"/> 
+                    <h2 id="crowd" className="skw-page__heading">go fund she</h2>
+                  </div>
                   <div className="description crowd-white">
                     <p>This is a crowdfunding website built using <span>Django REST Framework</span> for the back end and <span>React</span> for the front end. </p>
                     <p>This was my first React project, after having gone through <span>CSS</span>, <span>HTML</span>, <span>Python</span>, <span>Django</span> and <span>Django REST Framework</span>. I was getting a little tired to give up what I was enjoying to learn something completely new! I wanted to be able to savour what I had learned and get better at it instead of jumping to the next thing!</p>

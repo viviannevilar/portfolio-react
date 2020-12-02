@@ -337,7 +337,8 @@ $scrollTime: 1s;
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-flow: column wrap;
+      flex-direction: column;
+      // flex-flow: column wrap;
       position: absolute;
       left: 0;
       top: 0;
@@ -459,10 +460,12 @@ $scrollTime: 1s;
       }
       .description {
         border: 1px solid black;
-        border-radius: 1rem;
-        // background: white;
+        border-radius: 2rem;
+        background: white;
         color: black;
+        padding: 0.6rem;
         // padding: 0.4rem;
+        
       }
 
       .description p {
@@ -487,7 +490,7 @@ $scrollTime: 1s;
          background-image: url('./images/crowd1.png');
       }
       .skw-page__half--right .skw-page__content {
-        //  padding: 0 20%;
+        padding: 0 25%;
          //background: lighten(#191b1f, 0%);
          background-color: var(--crowd-gray);
       }
@@ -687,11 +690,12 @@ h2#python {
 
 h2#django {
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 4rem;
   margin-block-start: 0em;
   margin-block-end: 0em;
   width: 100%;
   margin-bottom: 2rem;
+  margin-left: 1rem;
 }
 
 // page 3 - crowdfunding
@@ -702,6 +706,7 @@ h2#crowd {
   color: var(--crowd-pink);
   text-transform: none;
   word-spacing: -0.2rem;
+  font-size: 3rem;
 }
 
 // page 4 - group project
