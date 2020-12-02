@@ -347,7 +347,7 @@ function Projects() {
                   <ColesLogoWrapper logoID="logo-coles-img" className="coles-logo"/>     
                   <h2 id="coles" className="skw-page__heading">collect data</h2>
                   <div className="description">
-                    <p>For this <span className="white fw-bold">webscraping</span> project, I wrote an <span className="white fw-bold">AppleScript</span> program to get data from two large Australian retailers websites. The script linked on the right is for Coles' website. Once you run the script, it opens Safari, directs Safari to Coles' website, changes location (to get price data from other capital cities), and records all data in a .csv file saved to desktop.</p>
+                    <p>For this <span className="white fw-bold">webscraping</span> project, I wrote an <span className="white fw-bold">AppleScript</span> program to get data from two large Australian retailers websites. Once you run the script, it opens Safari, directs Safari to the retailer website, types in the password (when needed), changes the location (to get price data from other capital cities), and records all data in a .csv file saved to desktop.</p>
                   </div>
 
                 </div>
