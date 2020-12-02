@@ -1,13 +1,17 @@
 ////////////////// imports ///////////////////
 import React from "react";
+import { Helmet } from 'react-helmet'
 import $ from 'jquery';
-import { FaExternalLinkAlt, FaGithub, FaSpeakap, FaCircle } from 'react-icons/fa'
+import { FaExternalLinkAlt, FaGithub, FaSpeakap } from 'react-icons/fa'
+
+
+
 
 // components
 import ColesLogoWrapper from "../Components/ColesWrapper"
 import Logo from "../Components/Logo"
 import SvgPythonGraph from "../Components/SvgPythonGraph"
-import IconStack from "../Components/IconStack"
+//import IconStack from "../Components/IconStack"
 // import SvgPythonPic from "../Components/SvgPythonPic.svg"
 
 // images
@@ -22,7 +26,7 @@ import LogoSkewed from "../images/MeSkewed2.png"
 function Projects() {
   // const [ buttonClicked, setButtonClicked ] = useState("none")
 
-
+const TITLE = 'Vivianne Vilar'
 
   // Jquery
   $(document).ready(function() {
@@ -101,6 +105,12 @@ function Projects() {
 
   return (
     <div>
+
+
+        <Helmet>
+          <title>{ TITLE }</title>
+        </Helmet>
+
       {/* Crooked projects page */}
       <div className="App">
         {/* ********* Python - Page 1 ********* */}
@@ -183,8 +193,8 @@ function Projects() {
                     <h2 id="django" className="skw-page__heading fw-bold">{"{SheCodes} News"}</h2>
                     <div className="description black">
                       <h3>Django</h3>
-                    <p>My first <span className="white">Django</span> project, this website is a newspaper style website which allows registered users to post stories, like and favourite stories and see them in their profile. 
-                    </p>
+                    <p>This project is how I learned <span className="white">Django</span> and fell in love with it!</p>
+                    <p>The website consists of a newspaper style website which allows registered users to post stories, like and favourite stories and see them in their profile. Stories have categories, and visitors can filter stories by category and also search stories for particular words and expressions. </p>
                   </div>
 
                 </div>
@@ -276,7 +286,38 @@ function Projects() {
                       <Logo src={LogoGroup}/>
                       <h2 id="group-project" className="skw-page__heading">groupProject</h2>
                     </div>
-                    <div className="icons">
+
+                    <div className="description">
+                      <p>Like the previous project, this website was done using <span>Django REST</span> for the back end and <span>React</span> for the front end.</p>
+                      <p>I contributed a lot to the <span>Django</span> and <span>React</span> parts, but not much the <span>CSS</span>. In spite of that, it was here that I started making peace with <span>CSS!</span>.</p>
+                      <p>Overall, this was the best part of the <span>SheCodes</span> program! It was great working in a team and having the chance to see how other people work, to learn from my group mates' codes and to deal with the different backgrounds, experiences, expectations and opinions. </p>
+                    </div>
+                    
+                </div>
+              </div>
+            </div>
+
+
+
+{/*  */}
+{/*  */}
+{/*  */}
+{/*  */}
+
+
+
+            <div className="overlay-container">
+              
+            <div className="skw-page__half skw-page__half--right bf-overlay">
+              <div className="skw-page__skewed">
+                <div className="skw-page__content"></div>
+              </div>
+            </div>
+
+            <div className="skw-page__half skw-page__half--right overlay">
+              <div className="skw-page__skewed">
+                <div className="skw-page__content">
+                <div className="icons">
                       <div>
                         <a href="http://comparalist.herokuapp.com"><FaExternalLinkAlt className="fa-icon fa-4x group-project-gray" /></a>
                         <p className="invisible"> open website</p>
@@ -286,16 +327,13 @@ function Projects() {
                         <p className="invisible"> git repository</p>
                       </div>
                     </div>
-                    
                 </div>
               </div>
             </div>
 
-            <div className="skw-page__half skw-page__half--right">
-              <div className="skw-page__skewed">
-                <div className="skw-page__content"></div>
-              </div>
             </div>
+
+
 
           </div>
 
