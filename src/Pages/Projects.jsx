@@ -201,6 +201,9 @@ const TITLE = 'Vivianne Vilar'
                     <div className="description white">
                       <p>This project is how I learned <span className="django-blue fw-bold">Django</span> and fell in love with it!</p>
                       <p>The website consists of a newspaper style website which allows registered users to post stories, like and favourite stories and see them in their profile. Visitors can filter stories by category and also search stories for particular words and expressions.</p>
+                      <p>
+                        The website wasn't deployed during the course. I have since deployed it but I am yet to add data to it.
+                      </p>
                     </div>
 
                 </div>
@@ -220,7 +223,7 @@ const TITLE = 'Vivianne Vilar'
                   <div className="skw-page__content">
                     <div className="icons">
                       <div>
-                        <a href="http://localhost:8000/news"><FaExternalLinkAlt className="fa-icon fa-4x black" /></a>
+                        <a href="http://shecodes-news.herokuapp.com/news/"><FaExternalLinkAlt className="fa-icon fa-4x black" /></a>
                         <p className="invisible">open website</p>
                       </div>
                       <div>
@@ -277,7 +280,7 @@ const TITLE = 'Vivianne Vilar'
                   <div className="description crowd-white">
                     <p>This is a crowdfunding website built using <span>Django REST</span> for the back end and <span>React</span> for the front end.</p>
                     <p>Registered users can post new projects, make pledge to other people's projects, see their profile and much more!</p>
-                    <p>This was my first time using both <span>React</span> and <span>Django REST</span>, and I think I didn't give <span>CSS</span> enough attention nor was I careful about bugs and problems. I did however learn a lot here, and this was all done 8 weeks! </p>
+                    <p>This was my first time using both <span>React</span> and <span>Django REST</span>, and I think I didn't give <span>CSS</span> enough attention nor was I careful about bugs and problems. I did however learn a lot here, and this was all done 8 weeks!</p>
                   </div>
                 </div>
               </div>
@@ -298,20 +301,14 @@ const TITLE = 'Vivianne Vilar'
 
                     <div className="description">
                       <p>Like the previous project, this website was written with <span>Django REST</span> for the back end and <span>React</span> for the front end.</p>
-                      <p>I contributed a lot to the <span>Django</span> and <span>React</span> parts, but not much the <span>CSS</span>. In spite of that, it was here that I started making peace with <span>CSS!</span>.</p>
-                      <p>Overall, this was the best part of the <span>SheCodes</span> program! It was great working in a team and having the chance to see how other people work, to learn from my group mates' codes and to deal with the different backgrounds, experiences, expectations and opinions. </p>
+                      <p>I contributed a lot to the <span>Django</span> and <span>React</span> parts, but not much the <span>CSS</span>. In spite of that, it was here that I started making peace with <span>CSS</span>!</p>
+                      <p>Overall, this was the best part of the <span>SheCodes</span> program! It was great working in a team and having the chance to see how other people work, to learn from my group mates' codes and to deal with the different backgrounds, experiences, expectations and opinions.</p>
                     </div>
                     
                 </div>
               </div>
             </div>
 
-
-
-{/*  */}
-{/*  */}
-{/*  */}
-{/*  */}
 
             <div className="overlay-container">
               
@@ -414,7 +411,7 @@ const TITLE = 'Vivianne Vilar'
                   <h2 id="skewed"className="skw-page__heading fw-bold"> Portfolio </h2>
                 </div>
                     <div className="description">
-                      <p className="skewed-green">This website was built using the code by <span className="skewed-purple">Nikolay Talanov</span> (right side panel) as the base. His code is written in <span className="skewed-yellow">Sass</span> and <span className="skewed-yellow">Jquery</span>, two things I have little to no experience with. I wrapped <span className="skewed-purple">Nikolay</span>'s code in <span className="skewed-yellow">React</span> and modified and added as needed. </p>
+                      <p className="skewed-green">This website was built using code by <span className="skewed-purple">Nikolay Talanov</span> (right side panel) as the base. His code is written in <span className="skewed-yellow">Sass</span> and <span className="skewed-yellow">Jquery</span>, two things I have little to no experience with. I wrapped <span className="skewed-purple">Nikolay</span>'s code in <span className="skewed-yellow">React</span> and modified and added as needed. </p>
                       
                       <p className="skewed-green">This project was the first time I really had fun with <span className="skewed-bright-white">CSS</span>! </p>
 
@@ -524,7 +521,7 @@ const TITLE = 'Vivianne Vilar'
         </div>
         <h2>Vivianne Vilar</h2>
         <p>Thanks for stopping by! Unfortunately this website does not have a mobile version yet. Please open on a desktop computer! </p>
-        <p>In the meantime, you can have a look at my github repository:</p>
+        <p>In the meantime, you can have a look at my github page:</p>
         <div className="logo-mobile">
           <a href="https://github.com/viviannevilar/"><FaGithub className="fa-icon fa-icon-mobile my-gray" /></a>
         </div>
