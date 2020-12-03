@@ -23,10 +23,9 @@ import LogoSkewed from "../images/MeSkewed2.png"
 function Projects() {
   // const [ buttonClicked, setButtonClicked ] = useState("none")
 
-const TITLE = 'Vivianne Vilar'
+  const TITLE = 'Vivianne Vilar'
 
   // Jquery
-  $(document).ready(function() {
     var curPage = 1;
     var numOfPages = $(".skw-page").length;
     var animTime = 1000;
@@ -56,17 +55,19 @@ const TITLE = 'Vivianne Vilar'
       curPage++;
       pagination();
     };
-  
-    $(document).on("mousewheel DOMMouseScroll ontouchstart ", function(e) {
+
+   
+    
+    window.addEventListener("wheel", e => {
       if (scrolling) return;
-      if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
+      if (e.wheelDelta > 0 || e.detail < 0) {
         navigateUp();
       } else { 
         navigateDown();
       }
     });
-  
-    $(document).on("keydown", function(e) {
+
+    window.addEventListener("keydown", e => {
       if (scrolling) return;
       if (e.which === 38) {
         navigateUp();
@@ -74,8 +75,7 @@ const TITLE = 'Vivianne Vilar'
         navigateDown();
       }
     });
-  
-  })
+
 
 
   function fileLink() {
