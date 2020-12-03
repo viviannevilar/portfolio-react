@@ -4,14 +4,11 @@ import { Helmet } from 'react-helmet'
 import $ from 'jquery';
 import { FaExternalLinkAlt, FaGithub, FaSpeakap } from 'react-icons/fa'
 
-
-
-
 // components
 import ColesLogoWrapper from "../Components/ColesWrapper"
 import Logo from "../Components/Logo"
 import SvgPythonGraph from "../Components/SvgPythonGraph"
-//import IconStack from "../Components/IconStack"
+// import IconStack from "../Components/IconStack"
 // import SvgPythonPic from "../Components/SvgPythonPic.svg"
 
 // images
@@ -133,15 +130,15 @@ const TITLE = 'Vivianne Vilar'
                 <div className="skw-page__skewed">
                   <div className="skw-page__content">
                     <div className="icons">
-                        <div>
+                      <div>
                         <a id="github-python" href="https://github.com/viviannevilar/Python-project"><FaGithub id="python" className="fa-icon fa-4x python-black" /></a>
                         <p className="invisible">git repository</p>
-                        </div>
-                        <div>
+                      </div>
+                      {/* <div>
                         <a onClick={fileLink} href="#"><FaSpeakap className="fa-icon fa-4x python-black" /></a>
                         <p className="invisible">ask me for a demo!</p>
-                        </div>
-                      </div>
+                      </div> */}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -166,7 +163,7 @@ const TITLE = 'Vivianne Vilar'
                       <div>
                       <p>Welcome to my portfolio! Here you will see the projects which were part of my <span className="python-pink">SheCodes</span> journey.</p> 
                       
-                      <p>This first page you are seeing now is dedicated to my <span className="python-pink">python</span> project. On the left you can see some of the graphs that I created as part of this project. The fake graph under this text was done using SVG.
+                      <p>This first page you are seeing now is dedicated to my <span className="python-pink">python</span> project. On the left you can see some of the graphs that I created as part of this project. The fake graph under this text was created using SVG code (which I am keen to play more with!).
                       </p>
                        {/* <p> If you hover the mouse over the left hand side panel, you will see a link to see the files in my git repository. You can also ask me to show you how they work (so no, the button on the left called "ask" doesn't do anything!). </p>   */}
                       
@@ -202,9 +199,9 @@ const TITLE = 'Vivianne Vilar'
                   </div>
 
                     <div className="description white">
-                    <p>This project is how I learned <span className="django-blue fw-bold">Django</span> and fell in love with it!</p>
-                    <p>The website consists of a newspaper style website which allows registered users to post stories, like and favourite stories and see them in their profile. Visitors can filter stories by category and also search stories for particular words and expressions.</p>
-                  </div>
+                      <p>This project is how I learned <span className="django-blue fw-bold">Django</span> and fell in love with it!</p>
+                      <p>The website consists of a newspaper style website which allows registered users to post stories, like and favourite stories and see them in their profile. Visitors can filter stories by category and also search stories for particular words and expressions.</p>
+                    </div>
 
                 </div>
               </div>
@@ -278,9 +275,9 @@ const TITLE = 'Vivianne Vilar'
                     <h2 id="crowd" className="skw-page__heading">go fund she</h2>
                   </div>
                   <div className="description crowd-white">
-                    <p>This is a crowdfunding website built using <span>Django REST</span> for the back end and <span>React</span> for the front end. </p>
+                    <p>This is a crowdfunding website built using <span>Django REST</span> for the back end and <span>React</span> for the front end.</p>
                     <p>Registered users can post new projects, make pledge to other people's projects, see their profile and much more!</p>
-                    <p>This was my first time using both <span>React</span> and <span>Django REST</span>, and I think I didn't give <span>CSS</span> enough attention nor was I careful about bugs and problems. I think I was a bit run down at this point, but the next project was exactly what I needed!</p>
+                    <p>This was my first time using both <span>React</span> and <span>Django REST</span>, and I think I didn't give <span>CSS</span> enough attention nor was I careful about bugs and problems. I did however learn a lot here, and this was all done 8 weeks! </p>
                   </div>
                 </div>
               </div>
@@ -300,7 +297,7 @@ const TITLE = 'Vivianne Vilar'
                     </div>
 
                     <div className="description">
-                      <p>Like the previous project, this website was done using <span>Django REST</span> for the back end and <span>React</span> for the front end.</p>
+                      <p>Like the previous project, this website was written with <span>Django REST</span> for the back end and <span>React</span> for the front end.</p>
                       <p>I contributed a lot to the <span>Django</span> and <span>React</span> parts, but not much the <span>CSS</span>. In spite of that, it was here that I started making peace with <span>CSS!</span>.</p>
                       <p>Overall, this was the best part of the <span>SheCodes</span> program! It was great working in a team and having the chance to see how other people work, to learn from my group mates' codes and to deal with the different backgrounds, experiences, expectations and opinions. </p>
                     </div>
@@ -315,8 +312,6 @@ const TITLE = 'Vivianne Vilar'
 {/*  */}
 {/*  */}
 {/*  */}
-
-
 
             <div className="overlay-container">
               
@@ -419,11 +414,11 @@ const TITLE = 'Vivianne Vilar'
                   <h2 id="skewed"className="skw-page__heading fw-bold"> Portfolio </h2>
                 </div>
                     <div className="description">
-                      <p className="skewed-green">This website was built using the code by <span className="skewed-purple">Nikolay Talanov</span> (right side panel) as the base. His code is written in <span className="skewed-yellow">Sass</span> and <span className="skewed-yellow">Jquery</span>, two things I have little to no experience with. I wrapped <span className="skewed-purple">Nikolay</span>'s code in <span className="skewed-yellow">React</span> and modified and added as needed. 
+                      <p className="skewed-green">This website was built using the code by <span className="skewed-purple">Nikolay Talanov</span> (right side panel) as the base. His code is written in <span className="skewed-yellow">Sass</span> and <span className="skewed-yellow">Jquery</span>, two things I have little to no experience with. I wrapped <span className="skewed-purple">Nikolay</span>'s code in <span className="skewed-yellow">React</span> and modified and added as needed. </p>
                       
-                      Here I focused more on <span className="skewed-bright-white">CSS</span> than on <span className="skewed-yellow">Javascript</span> </p>
-                      <p className="skewed-green">This project was the first time I really had fun with <span className="skewed-bright-white">CSS</span>, and I am looking forward to many more hours spent this way!</p>
-                      <p className="skewed-green">Next steps for this project are making it <span className="skewed-blue">mobile friendly</span>, adding a <span className="skewed-blue">hamburger menu</span>, including <span className="skewed-blue">more pages</span> and much more!</p>
+                      <p className="skewed-green">This project was the first time I really had fun with <span className="skewed-bright-white">CSS</span>! </p>
+
+                      <p className="skewed-green">My priorities for this project are making it mobile friendly and translating the Jquery into React. I also want to improve the code by using <span className="skewed-yellow">React</span> components and investigate styled-components (which I used for this project) a bit more to see if I want to adopt it into my style.</p>
                     </div>
               </div>
             </div>
