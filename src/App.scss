@@ -541,7 +541,12 @@ $scrollTime: 1s;
         font-weight: bold;
       }
       .description p span {
-        color: var(--group-project-blue)
+        color: var(--group-project-blue);
+      }
+
+      .description a {
+        color: var(--group-project-blue);
+        text-decoration: none;
       }
       /////////////////////////////////////////
       

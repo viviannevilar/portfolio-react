@@ -57,7 +57,6 @@ function Projects() {
     };
 
    
-    
     window.addEventListener("wheel", e => {
       if (scrolling) return;
       if (e.wheelDelta > 0 || e.detail < 0) {
@@ -202,7 +201,7 @@ function Projects() {
                       <p>This project is how I learned <span className="django-blue fw-bold">Django</span> and fell in love with it!</p>
                       <p>The website consists of a newspaper style website which allows registered users to post stories, like and favourite stories and see them in their profile. Visitors can filter stories by category and also search stories for particular words and expressions.</p>
                       <p>
-                        The website wasn't deployed during the course. I have since deployed it but I am yet to add data to it.
+                        This project wasn't deployed during the SheCodes course. I have since deployed it but I am yet to add data to it, so unfortunately it looks empty for now.
                       </p>
                     </div>
 
@@ -303,6 +302,7 @@ function Projects() {
                       <p>Like the previous project, this website was written with <span>Django REST</span> for the back end and <span>React</span> for the front end.</p>
                       <p>I contributed a lot to the <span>Django</span> and <span>React</span> parts, but not much the <span>CSS</span>. In spite of that, it was here that I started making peace with <span>CSS</span>!</p>
                       <p>Overall, this was the best part of the <span>SheCodes</span> program! It was great working in a team and having the chance to see how other people work, to learn from my group mates' codes and to deal with the different backgrounds, experiences, expectations and opinions.</p>
+                      <p><a href="https://ellenportfolio.herokuapp.com/">Ellen Marinko</a> was one of my group mates, check out her work, she is amazing!</p>
                     </div>
                     
                 </div>
@@ -498,6 +498,7 @@ function Projects() {
                   
                     
                     <p>Thank you for looking through my portfolio!</p>
+                    <p>viviannevilar at gmail dot com</p>
 
                   </div>
                 </div>
