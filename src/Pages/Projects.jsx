@@ -28,6 +28,7 @@ function Projects() {
   // Jquery
     var curPage = 1;
     var numOfPages = $(".skw-page").length;
+    console.log(numOfPages)
     var animTime = 1000;
     var scrolling = false;
     var pgPrefix = ".skw-page-";

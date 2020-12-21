@@ -4,7 +4,7 @@ import echo from '../Components/ConsoleLog'
 import ContactForm from '../contact/index'
 
 
-function Python() {
+function Contact() {
 
   console.log(
     "%cAltering the text experience",
@@ -12,9 +12,6 @@ function Python() {
     "font-size: 20px ; font-style: italic ; text-decoration: underline ; " +
     "font-family: 'american typewriter' ; text-shadow: 1px 1px 3px black ;"
   );
-
-
-
 
   console.warn("Test")
   echo.warn("test")
@@ -31,10 +28,12 @@ function Python() {
 
    return (
     <div className="App">
-      <p>empty</p>
+      <header className="App-header">
+        <ContactForm />
 
+      </header>
     </div>
    )
 }
 
-export default Python
+export default Contact
