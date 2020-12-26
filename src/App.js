@@ -3,9 +3,10 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import './App.scss';
 import Projects from './Pages/Projects'
-import Python from './Pages/Python'
+import Home from './Pages/Home'
+//import Python from './Pages/Python'
 import Contact from './Pages/Contact'
-import Nav from './Components/Nav'
+//import Nav from './Components/Nav'
 
 function App() {
 
@@ -16,6 +17,9 @@ function App() {
         <Router id="body">
           <Switch>
               <Route exact path="/">
+                <Home />
+              </Route>
+              <Route exact path="/projects/">
                 <Projects />
               </Route>
               <Route exact path="/contact/">

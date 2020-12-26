@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import { Axios, db } from '../firebase/firebaseConfig'
-import './styled.scss'
+import './ContactForm.scss'
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({})
+  const [contactName, setContactName] = useState()
+  const [messageSent, setMessageSent] = useState(false)
 
   const updateInput = e => {
     setFormData({
@@ -11,15 +13,19 @@ const ContactForm = () => {
       [e.target.name]: e.target.value,
     })
   }
+
   const handleSubmit = event => {
     event.preventDefault()
     sendEmail()
+    setContactName(formData.name)
+    setMessageSent(true)
     setFormData({
       name: '',
       email: '',
       message: '',
     })
   }
+
   const sendEmail = () => {
     Axios.post(
       'https://us-central1-portfolio-425e2.cloudfunctions.net/submit',
@@ -38,9 +44,17 @@ const ContactForm = () => {
       })
   }
 
+  const handleClick = event => {
+    event.preventDefault()
+    setMessageSent(false)
+  }
+
+
+  console.log("messageSent ", messageSent)
+
   return (
-    <>
-      <form onSubmit={handleSubmit}>
+    <div className="page-wrapper contact-overlay-container">
+      <form onSubmit={handleSubmit} className={messageSent ? "overlay-inactive" : "overlay-active"}>
         <input
           type="text"
           name="name"
@@ -64,8 +78,42 @@ const ContactForm = () => {
         ></textarea>
         <button type="submit">Submit</button>
       </form>
-    </>
+
+      <div className={`contact-overlay ${messageSent ? "overlay-active" : "overlay-inactive"}`}>
+          <p>Thank you, {contactName}, your message has been sent!</p>
+          <button className="button-a" href='#' onClick={handleClick}>Send another message</button>
+      </div>
+    </div>
   )
 }
 
 export default ContactForm
+
+
+
+
+///// overlay
+
+// .overlay {
+//   display: none;
+// }
+
+// .overlay-container:hover .overlay {
+//   display: block;
+//   // transition: 2s;
+// }
+
+// // might delete this, just seeing if it helps with deployed version
+// .overlay-container:hover .overlay-top {
+//   display: block;
+//   transition: 2s;
+// }
+
+// .overlay-container:hover .bf-overlay {
+//   filter: contrast(calc(0.5)) brightness(1);
+//  //filter: contrast(calc(0.5/1.5)) brightness(1.5);
+// }
+
+// .python-overlay-container {
+//   position: relative;
+// }

@@ -64,17 +64,17 @@
 
 .white { color: white;}
 .black { color: black;}
-.light-blue { color: #1bd3f3;}
-.red { color: #ef553b;}
-.orange { color: #ffa15a;}
-.green { color: #00cc96;}
-.purple { color: #ab63fa;}
-.blue { color: #636efb;}
-.python-bright-pink { color: #d60dd5;}
+.light-blue { color: var(--light-blue);}
+.red { color: var(--red);}
+.orange { color: var(--orange);}
+.green { color: var(--green);}
+.purple { color: var(--purple);}
+.blue { color: var(--blue);}
+.python-bright-pink { color: var(--python-bright-pink);}
 .python-dark-blue { color: var(--python-dark-blue);}
-.python-pink { color: #881988; }
-.group-project-blue { color: #004aad;}
-.group-project-gray { color: #b3b7a4;}
+.python-pink { color: var(--python-pink); }
+.group-project-blue { color: var(--group-project-blue);}
+.group-project-gray { color: var(--group-project-gray);}
 .python-black { color: var(--python-black);}
 .python-white { color: var(--python-white);}
 .python-dark-blue { color: var(--python-blue);}

@@ -1,7 +1,7 @@
 import React from 'react';
-import Nav from '../Components/Nav'
+//import Nav from '../Components/Nav'
 import echo from '../Components/ConsoleLog'
-import ContactForm from '../contact/index'
+import ContactForm from '../Components/ContactForm'
 
 
 function Contact() {
