@@ -6,6 +6,8 @@ import ContactForm from '../Components/ContactForm'
 
 function Contact() {
 
+
+
   console.log(
     "%cAltering the text experience",
     "background-color: fuchsia ; color: white ; font-weight: bold ; " +
@@ -30,7 +32,6 @@ function Contact() {
     <div className="App">
       <header className="App-header">
         <ContactForm />
-
       </header>
     </div>
    )

@@ -1,34 +1,37 @@
-h1 {
-  display: table;
-  margin: 40px auto;
-  color: #fff;
-  font: 30px Helvetica;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  letter-spacing: 10px;
-}
+// h1 {
+//   display: table;
+//   margin: 40px auto;
+//   color: #fff;
+//   font: 30px Helvetica;
+//   letter-spacing: 2px;
+//   text-transform: uppercase;
+//   letter-spacing: 10px;
+// }
 
 form {
   display: table;
   margin: 40px auto;
-  border: 1px solid red;
 
   input,
   textarea {
     font: 18px Helvetica, Arial, sans-serif;
     box-sizing: border-box;
     display: block;
-    border: none;
+    border: 1px solid var(--my-gray);
+    border-radius: 0.5rem;
     padding: 20px;
-    width: 300px;
+    width: 400px;
     margin-bottom: 20px;
     font-size: 18px;
     outline: none;
     transition: all 0.2s ease-in-out;
+    background-color: var(--my-green);
+    color: var(--my-yellow);
+
 
     &::placeholder {
       transition: all 0.2s ease-in-out;
-      color: #999;
+      color: var(--my-gray);
       font: 18px Helvetica, Arial, sans-serif;
     }
 
@@ -47,40 +50,38 @@ form {
     height: 200px;
   }
 
-  button {
-    transition: all 0.2s ease-in-out;
-    font: 18px Helvetica, Arial, sans-serif;
-    border: none;
-    background: #1792E8;
-    color: #fff;
-    padding: 20px;
-    width: 100%;
-    text-transform: uppercase;
-    letter-spacing: 5px;
+  // button {
+  //   transition: all 0.2s ease-in-out;
+  //   font: 18px Helvetica, Arial, sans-serif;
+  //   border: none;
+  //   background: #1792E8;
+  //   color: #fff;
+  //   padding: 20px;
+  //   // width: 100%;
+  //   text-transform: uppercase;
+  //   letter-spacing: 5px;
 
-    &:hover {
-      background: #0e82d4;
-      cursor: pointer;
-    }
-  }
-}
-
-
-.page-wrapper {
-  display: flex;
-  flex-direction: row;
-  border: 1px solid blue;
+  //   &:hover {
+  //     background: #0e82d4;
+  //     cursor: pointer;
+  //   }
+  // }
 }
 
 .contact-overlay-container {
-  border: 2px solid yellow;
+  display: flex;
+  flex-direction: row;
+  // border: 1px solid blue;
+  justify-content: center;
 }
 
 .contact-overlay {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  // border: 1px solid fuchsia;
 }
 
 .button-a {

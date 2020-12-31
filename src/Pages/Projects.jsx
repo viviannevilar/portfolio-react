@@ -4,6 +4,8 @@ import { Helmet } from 'react-helmet'
 import $ from 'jquery';
 import { FaExternalLinkAlt, FaGithub, FaSpeakap } from 'react-icons/fa'
 
+// FaBars - for hamburger menu
+
 // components
 import ColesLogoWrapper from "../Components/ColesWrapper"
 import Logo from "../Components/Logo"
@@ -494,6 +496,9 @@ function Projects() {
                       <button onClick={alertButton}className="button-about">React</button>
                       <button onClick={alertButton}className="button-about">R</button>
                       <button onClick={alertButton}className="button-about">Applescript</button>
+                      <button onClick={alertButton}className="button-about">HTML</button>
+                      <button onClick={alertButton}className="button-about">CSS</button>
+                      <button onClick={alertButton}className="button-about">JavaScript</button>
                       {/* <button onClick={clickButton("button6")} className={`"button-about" ${buttonClicked === "button6" ? "button-active" : ""}`}>{buttonClicked === "button6" ? "Not a real button!" : "Applescript"}</button> */}
                     </div>
                   
@@ -507,8 +512,6 @@ function Projects() {
             </div>
 
           </div>
-
-
 
 
           {/* those are the end of the divs enclosing the pages. Need 3 divs after this comment */}
