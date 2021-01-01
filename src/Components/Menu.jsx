@@ -2,17 +2,19 @@ import React from 'react';
 import styled from 'styled-components';
 import { bool } from 'prop-types';
 
+import Logo from "../Components/Logo"
 
 
 export const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: black; 
+  background: var(--my-green); 
   height: 100vh;
   text-align: left;
   padding: 2rem;
   position: absolute;
+  border: 2px solid var(--my-gray);
   top: 0;
   left: 0;
   transition: transform 0.3s ease-in-out;
@@ -23,12 +25,13 @@ export const StyledMenu = styled.nav`
   }
 
   a {
+    font-family: Titan One;
     font-size: 2rem;
     text-transform: uppercase;
     padding: 2rem 0;
-    font-weight: bold;
+    font-weight: normal;
     letter-spacing: 0.5rem;
-    color: black;
+    color: var(--my-gray);
     text-decoration: none;
     transition: color 0.3s linear;
     
@@ -38,7 +41,8 @@ export const StyledMenu = styled.nav`
     }
 
     &:hover {
-      color: yellow;
+      color: var(--my-yellow);
+      text-shadow: 0 0 6px var(--my-gray);
     }
   }
 `;
@@ -47,16 +51,21 @@ export const StyledMenu = styled.nav`
 const Menu = ({ open }) => {
   return (
     <StyledMenu open={open}>
-      <a href="/">
-        <span role="img" aria-label="about us">&#x1f481;&#x1f3fb;&#x200d;&#x2642;&#xfe0f;</span>
-        About us
-      </a>
-      <a href="/">
-        <span role="img" aria-label="price">&#x1f4b8;</span>
-        Pricing
+      <div className="center">
+        <a href="/">
+          <span role="img" aria-label="home">
+            <Logo figHeight="4rem"/>
+          </span>
+         
         </a>
+      </div>  
       <a href="/">
-        <span role="img" aria-label="contact">&#x1f4e9;</span>
+        About Me
+      </a>
+      <a href="/projects/">
+        Projects
+        </a>
+      <a href="/contact/">
         Contact
         </a>
     </StyledMenu>

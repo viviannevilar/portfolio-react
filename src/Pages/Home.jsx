@@ -1,6 +1,6 @@
 ////////////////// imports ///////////////////
 import React, { useState, useEffect } from "react"
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 //-----> external packages 
 import { Helmet } from 'react-helmet'
 //-----> components
@@ -15,8 +15,20 @@ import LogoCrop from "../images/MeeCropSharp.png"
 ////////////////// main function ///////////////////
 function Home() {
   const history = useHistory()
+  const location = useLocation()
 
   const [contactActive, setContactActive] = useState(false)
+
+
+
+
+  useEffect(() => {
+    if (location.pathname === "/contact/") {
+      setContactActive(true)
+    }
+    console.log("contact active? ", contactActive)
+
+  },[location])
 
   function handleClick(name) {
     if (name === "contact") {
@@ -58,7 +70,7 @@ function Home() {
         <div class="buttons">
           <button onClick={() => handleClick("projects")}>Projects</button>
           <button onClick="document.location='about'">About Me</button>
-          <button onClick={() => handleClick("contact")}>Get in Touch</button>
+          <button onClick={() => handleClick("contact")}>Contact</button>
 
         </div>
       </div>
