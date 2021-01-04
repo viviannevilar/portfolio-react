@@ -1,4 +1,4 @@
-////////////////// imports ////////////////// 
+////////////////// font imports ////////////////// 
 
 // Defaults from Skewed slides
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap');
@@ -17,7 +17,6 @@
 // Skewed Slides (Portfolio, page 6) font
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 @import url('https://use.typekit.net/qhr6wpt.css');
-
 
 // About Me (page 7)
 @import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
@@ -228,6 +227,11 @@ a:hover + p.invisible {
   justify-content: center;
 }
 
+.fa-icon {
+  font-size: 6rem;
+}
+
+
 .fa-icon-mobile {
   font-size: 4rem;
 }
@@ -393,11 +397,9 @@ $scrollTime: 1s;
       }
       .skw-page__half--right .skw-page__content {
          background: lighten(#111111, 0%); //#881988
-        //  padding: 0 25%;
       }
       h2 {
         font-weight: bold;
-        // letter-spacing: 0.5rem;
         font-size: 6rem;
       }
       .skw-page__half--right .skw-page__skewed {
@@ -764,11 +766,6 @@ h2#skewed {
 ////////////////////////////////// rest /////////////////////////////
 
 
-.fa-4x {
-  font-size: 6rem;
-  // color: #b3b7a4;
-}
-
 // div.icons {
 //   display: flex;
 //   flex-direction: row;
@@ -776,11 +773,6 @@ h2#skewed {
 //   min-width: 20rem;
 //   border: 2px solid red;
 // }
-
-
-.django a .fa-icon {
-  color: black;
-}
 
 
 .icons {
@@ -818,14 +810,6 @@ h2#skewed {
 //   background: linear-gradient(to right, #1bd3f3 16.66%, #ef553b 16.66% 33.33%, #ffa15a 33.33% 46%, green 46% 63%, #ab63fa 63% 83.33%, #636efb 83.33%);  -webkit-background-clip: text;
 // }
 
-a#github-python {
-  // background-color: var(--python-pink);
-  //padding: 1rem;
-  // border-radius: 3rem;
-  // border: 1px solid var(--python-bright-pink);
-  
-}
-
 a#fa-git-python {
   background-color: var(--python-pink);
   padding: 1rem;
@@ -853,8 +837,6 @@ a#fa-file-coles {
   height: 5rem;
   max-height: 5rem;
 }
-
-// id="github-python
 
 
 @media (pointer:coarse) {

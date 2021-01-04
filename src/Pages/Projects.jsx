@@ -12,6 +12,8 @@ import Logo from "../Components/Logo"
 import SvgPythonGraph from "../Components/SvgPythonGraph"
 // import IconStack from "../Components/IconStack"
 // import SvgPythonPic from "../Components/SvgPythonPic.svg"
+import { HalfPage } from "./ProjectPages/ProjectPage"
+
 
 // images
 import LogoGroup from "../images/MeGroup6.png"
@@ -114,6 +116,7 @@ function Projects() {
 
       {/* Crooked projects page */}
       <div className="App">
+
         {/* ********* Python - Page 1 ********* */}
         {/*          ******************         */}
         <div className="skw-pages">
@@ -122,39 +125,25 @@ function Projects() {
             {/* left - image - set in the .scss file */}
             <div className="overlay-container">
 
-              <div className="skw-page__half skw-page__half--left bf-overlay">
-                <div className="skw-page__skewed">
-                  <div className="skw-page__content"></div>
-                </div>
-              </div>
+              <HalfPage side="left" className="bf-overlay" />
 
-              <div className="skw-page__half skw-page__half--left overlay">
-                <div className="skw-page__skewed">
-                  <div className="skw-page__content">
-                    <div className="icons">
-                      <div>
-                        <a id="github-python" href="https://github.com/viviannevilar/Python-project"><FaGithub id="python" className="fa-icon fa-4x python-black" /></a>
-                        <p className="invisible">git repository</p>
-                      </div>
-                      {/* <div>
-                        <a onClick={fileLink} href="#"><FaSpeakap className="fa-icon fa-4x python-black" /></a>
-                        <p className="invisible">ask me for a demo!</p>
-                      </div> */}
-                    </div>
+              <HalfPage side="left" className="overlay">
+                <div className="icons">
+                  <div>
+                    <a href="https://github.com/viviannevilar/Python-project"><FaGithub className="fa-icon python-black" /></a>
+                    <p className="invisible">git repository</p>
                   </div>
                 </div>
-              </div>
-              
+              </HalfPage>
+            
             </div>
 
 
             {/* right - logo and name of project */}
-            <div className="skw-page__half skw-page__half--right">
-              <div className="skw-page__skewed">
-                <div className="skw-page__content">
-                <div className="title-wrapper">
-                  <Logo src={LogoPython} figHeight="6rem"/> 
-                  <h2 id="python" className="skw-page__heading rainbow-text"> Python </h2>
+            <HalfPage side="right">
+            <div className="title-wrapper">
+                    <Logo src={LogoPython} figHeight="6rem"/> 
+                    <h2 id="python" className="skw-page__heading rainbow-text">Python</h2>
                   </div>
 
                   <div  className="description python-overlay-container" >
@@ -163,30 +152,21 @@ function Projects() {
                     </div>
                     <div id="python-overlay">
                       <div>
-                      <p>Welcome to my portfolio! Here you will see the projects which were part of my <span className="python-pink">SheCodes</span> journey.</p> 
-                      
-                      <p>This first page you are seeing now is dedicated to my <span className="python-pink">python</span> project. On the left you can see some of the graphs that I created as part of this project. The fake graph under this text was created using SVG code (which I am keen to play more with!).
-                      </p>
-                       {/* <p> If you hover the mouse over the left hand side panel, you will see a link to see the files in my git repository. You can also ask me to show you how they work (so no, the button on the left called "ask" doesn't do anything!). </p>   */}
-                      
-                      <p>When you are ready, you can use the trackpad to slide two fingers up and see the next page!</p>
+                        <p>Welcome to my portfolio! Here you will see the projects which were part of my <span className="python-pink">SheCodes</span> journey.</p> 
+                        
+                        <p>This first page you are seeing now is dedicated to my <span className="python-pink">python</span> project. On the left you can see some of the graphs that I created as part of this project. The fake graph under this text was created using SVG code (which I am keen to play more with!).
+                        </p>
+                        {/* <p> If you hover the mouse over the left hand side panel, you will see a link to see the files in my git repository. You can also ask me to show you how they work (so no, the button on the left called "ask" doesn't do anything!). </p>   */}
+                        
+                        <p>When you are ready, you can use the trackpad to slide two fingers up and see the next page!</p>
                       </div>
-                    </div>
-                             
+                    </div>     
 
                   </div>
 
-                  {/* <div className="icons">
-                      <a id="fa-git-python" href="https://github.com/viviannevilar/Python-project"><FaGithub className="fa-icon fa-4x black" /></a>
-                    </div> */}
-
-                </div>
-              </div>
-            </div>
+            </HalfPage>
 
           </div>
-
-
 
         {/* ********* Django/SheCodes News - Page 2 ********* */}
         {/*          ******************         */}
@@ -194,19 +174,20 @@ function Projects() {
 
             <div className="skw-page__half skw-page__half--left">
               <div className="skw-page__skewed">
-                <div className="skw-page__content django">
+                <div className="skw-page__content">
+
                   <div className="title-wrapper">
                     <Logo src={LogoDjango} figHeight="6rem"/> 
                     <h2 id="django" className="skw-page__heading fw-bold">Django</h2>
                   </div>
 
-                    <div className="description white">
-                      <p>This project is how I learned <span className="django-blue fw-bold">Django</span> and fell in love with it!</p>
-                      <p>The website consists of a newspaper style website which allows registered users to post stories, like and favourite stories and see them in their profile. Visitors can filter stories by category and also search stories for particular words and expressions.</p>
-                      <p>
-                        This project wasn't deployed during the SheCodes course. I have since deployed it but I am yet to add data to it, so unfortunately it looks empty for now.
-                      </p>
-                    </div>
+                  <div className="description white">
+                    <p>This project is how I learned <span className="django-blue fw-bold">Django</span> and fell in love with it!</p>
+                    <p>The website consists of a newspaper style website which allows registered users to post stories, like and favourite stories and see them in their profile. Visitors can filter stories by category and also search stories for particular words and expressions.</p>
+                    <p>
+                      This project wasn't deployed during the SheCodes course. I have since deployed it but I am yet to add data to it, so unfortunately it looks empty for now.
+                    </p>
+                  </div>
 
                 </div>
               </div>
@@ -214,28 +195,20 @@ function Projects() {
 
             <div className="overlay-container">
 
-              <div className="skw-page__half skw-page__half--right bf-overlay">
-                <div className="skw-page__skewed">
-                  <div className="skw-page__content"></div>
-                </div>
-              </div>
+              <HalfPage side="right" className="bf-overlay" />
 
-              <div className="skw-page__half skw-page__half--right overlay">
-                <div className="skw-page__skewed">
-                  <div className="skw-page__content">
-                    <div className="icons">
-                      <div>
-                        <a href="http://shecodes-news.herokuapp.com/news/"><FaExternalLinkAlt className="fa-icon fa-4x black" /></a>
-                        <p className="invisible">open website</p>
-                      </div>
-                      <div>
-                        <a href="https://github.com/viviannevilar/Django-project"><FaGithub className="fa-icon fa-4x black" /></a>
-                        <p className="invisible">git repository</p>
-                      </div>
-                    </div>
+              <HalfPage side="right" className="overlay" >
+                <div className="icons">
+                  <div>
+                    <a href="http://shecodes-news.herokuapp.com/news/"><FaExternalLinkAlt className="fa-icon black" /></a>
+                    <p className="invisible">open website</p>
+                  </div>
+                  <div>
+                    <a href="https://github.com/viviannevilar/Django-project"><FaGithub className="fa-icon black" /></a>
+                    <p className="invisible">git repository</p>
                   </div>
                 </div>
-              </div>
+              </HalfPage>
 
             </div>
 
@@ -245,48 +218,34 @@ function Projects() {
         {/*          *************************         */}
           <div className="skw-page skw-page-3">
 
-          <div className="overlay-container">
-
-            <div className="skw-page__half skw-page__half--left bf-overlay">
-              <div className="skw-page__skewed">
-                <div className="skw-page__content"></div>
-              </div>
-            </div>
-
-            <div className="skw-page__half skw-page__half--left overlay">
-                <div className="skw-page__skewed">
-                  <div className="skw-page__content">
-                    <div className="icons">
-                      <div>
-                        <a href="https://gofundshe.herokuapp.com/"><FaExternalLinkAlt className="fa-icon fa-4x crowd-white" /></a>
-                        <p className="invisible"> open website</p>
-                      </div>  
-                      <div>
-                        <a href="https://github.com/viviannevilar/crowd-react"><FaGithub className="fa-icon fa-4x crowd-white" /></a> 
-                        <p className="invisible"> git repository</p>
-                      </div>
-                    </div>
+            <div className="overlay-container">
+              <HalfPage side="left" className="bf-overlay" />
+              
+              <HalfPage side="left" className="overlay" >
+                <div className="icons">
+                  <div>
+                    <a href="https://gofundshe.herokuapp.com/"><FaExternalLinkAlt className="fa-icon crowd-white" /></a>
+                    <p className="invisible"> open website</p>
+                  </div>  
+                  <div>
+                    <a href="https://github.com/viviannevilar/crowd-react"><FaGithub className="fa-icon crowd-white" /></a> 
+                    <p className="invisible"> git repository</p>
                   </div>
-                </div>
-              </div>
+                </div>           
+              </HalfPage>
+            </div> 
 
-          </div>
-
-            <div className="skw-page__half skw-page__half--right">
-              <div className="skw-page__skewed">
-                <div className="skw-page__content">
-                  <div className="title-wrapper">
-                  <Logo src={LogoCrowd} figHeight="6rem"/> 
-                    <h2 id="crowd" className="skw-page__heading">go fund she</h2>
-                  </div>
-                  <div className="description crowd-white">
-                    <p>This is a crowdfunding website built using <span>Django REST</span> for the back end and <span>React</span> for the front end.</p>
-                    <p>Registered users can post new projects, make pledge to other people's projects, see their profile and much more!</p>
-                    <p>This was my first time using both <span>React</span> and <span>Django REST</span>, and I think I didn't give <span>CSS</span> enough attention nor was I careful about bugs and problems. I did however learn a lot here, and this was all done 8 weeks!</p>
-                  </div>
-                </div>
+            <HalfPage side="right">
+              <div className="title-wrapper">
+                <Logo src={LogoCrowd} figHeight="6rem"/> 
+                <h2 id="crowd" className="skw-page__heading">go fund she</h2>
               </div>
-            </div>
+              <div className="description crowd-white">
+                <p>This is a crowdfunding website built using <span>Django REST</span> for the back end and <span>React</span> for the front end.</p>
+                <p>Registered users can post new projects, make pledge to other people's projects, see their profile and much more!</p>
+                <p>This was my first time using both <span>React</span> and <span>Django REST</span>, and I think I didn't give <span>CSS</span> enough attention nor was I careful about bugs and problems. I did however learn a lot here, and this was all done 8 weeks!</p>
+              </div>
+            </HalfPage>
 
           </div>
 
@@ -307,40 +266,27 @@ function Projects() {
                       <p>Overall, this was the best part of the <span>SheCodes</span> program! It was great working in a team and having the chance to see how other people work, to learn from my group mates' codes and to deal with the different backgrounds, experiences, expectations and opinions.</p>
                       <p><a href="https://ellenportfolio.herokuapp.com/">Ellen Marinko</a> was one of my group mates, check out her work, she is amazing!</p>
                     </div>
-                    
                 </div>
               </div>
             </div>
 
 
             <div className="overlay-container">
-              
-            <div className="skw-page__half skw-page__half--right bf-overlay">
-              <div className="skw-page__skewed">
-                <div className="skw-page__content"></div>
-              </div>
-            </div>
+              <HalfPage side="right" className="bf-overlay" />
 
-            <div className="skw-page__half skw-page__half--right overlay">
-              <div className="skw-page__skewed">
-                <div className="skw-page__content">
+              <HalfPage side="right" className="overlay">
                 <div className="icons">
-                      <div>
-                        <a href="http://comparalist.herokuapp.com"><FaExternalLinkAlt className="fa-icon fa-4x group-project-gray" /></a>
-                        <p className="invisible"> open website</p>
-                      </div>
-                      <div>
-                        <a href="https://github.com/viviannevilar/group-react"><FaGithub className="fa-icon fa-4x group-project-gray" /></a>
-                        <p className="invisible"> git repository</p>
-                      </div>
-                    </div>
+                  <div>
+                    <a href="http://comparalist.herokuapp.com"><FaExternalLinkAlt className="fa-icon  group-project-gray" /></a>
+                    <p className="invisible"> open website</p>
+                  </div>
+                  <div>
+                    <a href="https://github.com/viviannevilar/group-react"><FaGithub className="fa-icon  group-project-gray" /></a>
+                    <p className="invisible"> git repository</p>
+                  </div>
                 </div>
-              </div>
+              </HalfPage>
             </div>
-
-            </div>
-
-
 
           </div>
 
@@ -349,40 +295,21 @@ function Projects() {
 
             <div className="overlay-container">
 
-              <div className="skw-page__half skw-page__half--left bf-overlay">
-                <div className="skw-page__skewed">
-                  <div className="skw-page__content"></div>
-                </div>
-              </div>
+              <HalfPage side="left" className="bf-overlay" />
 
               {/* overlay with the csv file */}
-              <div className="skw-page__half skw-page__half--left overlay">
-                <div className="skw-page__skewed">
-                  <div className="skw-page__content">
-                  </div>
-                </div>
-              </div>
+              <HalfPage side="left" className="overlay" />
 
               {/* overlay on top of overlay in order not to put a filter on top of icon */}
-              <div className="skw-page__half skw-page__half--left overlay-top">
-                <div className="skw-page__skewed">
-                  <div className="skw-page__content">
-                    <div className="icons">
-                      {/* want to wrap this in coleswrapper, need to find out how to send the component as props */}
-                      <div>
-                          <a onClick={fileLink} href="#"><FaSpeakap className="fa-icon fa-4x coles-red" /></a>
- 
-                          {/* <IconStack>
-                          <FaCircle className="fa-icon fa-4x black" size={'4rem'}/>
-                          <FaSpeakap className="fa-icon fa-4x coles-red" size={'3rem'}/>
-                        </IconStack> */}
-                      
-                      <p className="invisible black">ask me to give you a demo!</p>
-                      </div>
-                    </div>
+              <HalfPage side="left" className="overlay-top">
+                <div className="icons">
+                  {/* want to wrap this in coleswrapper, need to find out how to send the component as props */}
+                  <div>
+                    <a onClick={fileLink} href="#"><FaSpeakap className="fa-icon  coles-red" /></a>
+                    <p className="invisible black">ask me to give you a demo!</p>
                   </div>
                 </div>
-              </div>
+              </HalfPage>
 
             </div>
 
@@ -413,42 +340,33 @@ function Projects() {
                   <Logo src={LogoSkewed} figHeight="5rem"/> 
                   <h2 id="skewed"className="skw-page__heading fw-bold"> Portfolio </h2>
                 </div>
-                    <div className="description">
-                      <p className="skewed-green">This website was built using code by <span className="skewed-purple">Nikolay Talanov</span> (right side panel) as the base. His code is written in <span className="skewed-yellow">Sass</span> and <span className="skewed-yellow">Jquery</span>, two things I have little to no experience with. I wrapped <span className="skewed-purple">Nikolay</span>'s code in <span className="skewed-yellow">React</span> and modified and added as needed. </p>
-                      
-                      <p className="skewed-green">This project was the first time I really had fun with <span className="skewed-bright-white">CSS</span>! </p>
+                <div className="description">
+                  <p className="skewed-green">This website was built using code by <span className="skewed-purple">Nikolay Talanov</span> (right side panel) as the base. His code is written in <span className="skewed-yellow">Sass</span> and <span className="skewed-yellow">Jquery</span>, two things I have little to no experience with. I wrapped <span className="skewed-purple">Nikolay</span>'s code in <span className="skewed-yellow">React</span> and modified and added as needed. </p>
+                  
+                  <p className="skewed-green">This project was the first time I really had fun with <span className="skewed-bright-white">CSS</span>! </p>
 
-                      <p className="skewed-green">My priorities for this project are making it mobile friendly and translating the Jquery into React. I also want to improve the code by using <span className="skewed-yellow">React</span> components and investigate styled-components (which I used for this project) a bit more to see if I want to adopt it into my style.</p>
-                    </div>
+                  <p className="skewed-green">My priorities for this project are making it mobile friendly and translating the Jquery into React. I also want to improve the code by using <span className="skewed-yellow">React</span> components and investigate styled-components (which I used for this project) a bit more to see if I want to adopt it into my style.</p>
+                </div>
               </div>
             </div>
           </div>
 
           <div className="overlay-container">
 
-            <div className="skw-page__half skw-page__half--right bf-overlay">
-              <div className="skw-page__skewed">
-                <div className="skw-page__content"></div>
+          <HalfPage side="right" className="bf-overlay" />
+
+          <HalfPage side="right" className="overlay">
+            <div className="icons">
+              <div>
+                <a href="https://codepen.io/suez/pen/gadLre"><FaExternalLinkAlt className="fa-icon  skewed-white" /></a>
+                <p className="invisible">open codepen</p>
+              </div>
+              <div>
+                <a href="https://github.com/viviannevilar/portfolio-react"><FaGithub className="fa-icon  skewed-white" /></a>
+                <p className="invisible"> git repository </p>
               </div>
             </div>
-
-            <div className="skw-page__half skw-page__half--right overlay">
-              <div className="skw-page__skewed">
-                <div className="skw-page__content">
-                  <div className="icons">
-                    <div>
-                      <a href="https://codepen.io/suez/pen/gadLre"><FaExternalLinkAlt className="fa-icon fa-4x skewed-white" /></a>
-                      <p className="invisible">open codepen</p>
-                    </div>
-                    <div>
-                      <a href="https://github.com/viviannevilar/portfolio-react"><FaGithub className="fa-icon fa-4x skewed-white" /></a>
-                      <p className="invisible"> git repository </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
+          </HalfPage>
 
 
             {/* filter not being used */}
@@ -465,21 +383,13 @@ function Projects() {
 
           </div>
 
-
-
-
-
           </div>
 
 
           {/* Page 7 -  */}
           <div className="skw-page skw-page-7">
 
-              <div className="skw-page__half skw-page__half--left">
-                <div className="skw-page__skewed">
-                  <div className="skw-page__content"></div>
-                </div>
-              </div>
+          <HalfPage side="left" className="bf-overlay" />
 
             <div className="skw-page__half skw-page__half--right">
               <div className="skw-page__skewed">
