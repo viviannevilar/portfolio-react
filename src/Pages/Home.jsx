@@ -10,7 +10,7 @@ import './Home.scss'
 //-----> images
 import LogoCrop from "../images/MeeCropSharp.png"
 //import echo from "../Components/ConsoleLog";
-
+import Pdf from '../images/CV_VivianneVilar.pdf';
 
 ////////////////// main function ///////////////////
 function Home() {
@@ -69,7 +69,8 @@ function Home() {
         </p>
         <div class="buttons">
           <button onClick={() => handleClick("projects")}>Projects</button>
-          <button onClick="document.location='about'">About Me</button>
+          <a className="button" href = {Pdf} target = "_blank">CV</a>
+          {/* <button onClick="document.location='about'">CV</button> */}
           <button onClick={() => handleClick("contact")}>Contact</button>
 
         </div>

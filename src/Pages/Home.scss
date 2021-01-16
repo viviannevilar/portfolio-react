@@ -8,7 +8,7 @@
 ////////////////// general ////////////////// 
 html {
   font-family: 'Titan One', 'Indie+Flower', sans-serif;
-  background-color: var(--my-green);
+  // background-color: var(--my-green);
   // color: var(--gray-colour);
   // /* font-size: 1vw; */
 }
@@ -31,7 +31,7 @@ html {
     text-align: center;
   }
 
-  button {
+  button, .button {
     background-color: var(--my-gray);
     border: 2px solid var(--my-gray);;
     border-radius: 5px;
@@ -39,7 +39,9 @@ html {
     font-family: 'Titan One';
     font-size: 1.2rem;
     padding: 0.4rem;
-    min-width: 5rem;
+    min-width: 7rem;
+    text-align: center;
+    text-decoration: none;
   }
 
   button:hover {

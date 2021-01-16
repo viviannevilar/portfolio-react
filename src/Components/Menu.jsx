@@ -59,7 +59,7 @@ const Menu = ({ open }) => {
          
         </a>
       </div>  
-      <a href="/">
+      <a href="/about/">
         About Me
       </a>
       <a href="/projects/">

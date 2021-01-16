@@ -4,8 +4,6 @@ import { Helmet } from 'react-helmet'
 import $ from 'jquery';
 import { FaExternalLinkAlt, FaGithub, FaSpeakap } from 'react-icons/fa'
 
-// FaBars - for hamburger menu
-
 // components
 import ColesLogoWrapper from "../Components/ColesWrapper"
 import Logo from "../Components/Logo"
@@ -14,14 +12,12 @@ import SvgPythonGraph from "../Components/SvgPythonGraph"
 // import SvgPythonPic from "../Components/SvgPythonPic.svg"
 import { HalfPage } from "./ProjectPages/ProjectPage"
 
-
 // images
 import LogoGroup from "../images/MeGroup6.png"
 import LogoDjango from "../images/MeDjango3.png"
 import LogoPython from "../images/MePython2.png"
 import LogoCrowd from "../images/MeCrowd2.png"
 import LogoSkewed from "../images/MeSkewed2.png"
-
 
 /////////////////////// main function ////////////////////
 function Projects() {
@@ -30,57 +26,53 @@ function Projects() {
   const TITLE = 'Vivianne Vilar'
 
   // Jquery
-    var curPage = 1;
-    var numOfPages = $(".skw-page").length;
-    console.log(numOfPages)
-    var animTime = 1000;
-    var scrolling = false;
-    var pgPrefix = ".skw-page-";
-  
-    function pagination() {
-      scrolling = true;
-  
-      $(pgPrefix + curPage).removeClass("inactive").addClass("active");
-      $(pgPrefix + (curPage - 1)).addClass("inactive");
-      $(pgPrefix + (curPage + 1)).removeClass("active");
-  
-      setTimeout(function() {
-        scrolling = false;
-      }, animTime);
-    };
-  
-    function navigateUp() {
-      if (curPage === 1) return;
-      curPage--;
-      pagination();
-    };
-  
-    function navigateDown() {
-      if (curPage === numOfPages) return;
-      curPage++;
-      pagination();
-    };
+  var curPage = 1;
+  var numOfPages = $(".skw-page").length;
+  var animTime = 1000;
+  var scrolling = false;
+  var pgPrefix = ".skw-page-";
 
-   
-    window.addEventListener("wheel", e => {
-      if (scrolling) return;
-      if (e.wheelDelta > 0 || e.detail < 0) {
-        navigateUp();
-      } else { 
-        navigateDown();
-      }
-    });
+  function pagination() {
+    scrolling = true;
 
-    window.addEventListener("keydown", e => {
-      if (scrolling) return;
-      if (e.which === 38) {
-        navigateUp();
-      } else if (e.which === 40) {
-        navigateDown();
-      }
-    });
+    $(pgPrefix + curPage).removeClass("inactive").addClass("active");
+    $(pgPrefix + (curPage - 1)).addClass("inactive");
+    $(pgPrefix + (curPage + 1)).removeClass("active");
 
+    setTimeout(function() {
+      scrolling = false;
+    }, animTime);
+  };
+  
+  function navigateUp() {
+    if (curPage === 1) return;
+    curPage--;
+    pagination();
+  };
 
+  function navigateDown() {
+    if (curPage === numOfPages) return;
+    curPage++;
+    pagination();
+  };
+
+  window.addEventListener("wheel", e => {
+    if (scrolling) return;
+    if (e.wheelDelta > 0 || e.detail < 0) {
+      navigateUp();
+    } else { 
+      navigateDown();
+    }
+  });
+
+  window.addEventListener("keydown", e => {
+    if (scrolling) return;
+    if (e.which === 38) {
+      navigateUp();
+    } else if (e.which === 40) {
+      navigateDown();
+    }
+  });
 
   function fileLink() {
     alert("Sorry, this button doesn't do anything! Ask me, I will be happy to show you!")
@@ -102,7 +94,6 @@ function Projects() {
 
 //}
 
-
 // function clickButton(buttonName) {
 //   console.log("inside function", buttonClicked)
 //   setButtonClicked(buttonName);  
@@ -114,11 +105,9 @@ function Projects() {
           <title>{ TITLE }</title>
         </Helmet>
 
-      {/* Crooked projects page */}
       <div className="App">
 
         {/* ********* Python - Page 1 ********* */}
-        {/*          ******************         */}
         <div className="skw-pages">
           <div className="skw-page skw-page-1 active">
 
@@ -141,57 +130,49 @@ function Projects() {
 
             {/* right - logo and name of project */}
             <HalfPage side="right">
-            <div className="title-wrapper">
-                    <Logo src={LogoPython} figHeight="6rem"/> 
-                    <h2 id="python" className="skw-page__heading rainbow-text">Python</h2>
+              <div className="title-wrapper">
+                <Logo src={LogoPython} figHeight="6rem"/> 
+                <h2 id="python" className="skw-page__heading rainbow-text">Python</h2>
+              </div>
+
+              <div  className="description python-overlay-container" >
+                <div id="python-svg">
+                  <SvgPythonGraph />
+                </div>
+                <div id="python-overlay">
+                  <div>
+                    <p>Welcome to my portfolio! Here you will see the projects which were part of my <span className="python-pink">SheCodes</span> journey.</p> 
+                    
+                    <p>This first page you are seeing now is dedicated to my <span className="python-pink">python</span> project. On the left you can see some of the graphs that I created as part of this project. The fake graph under this text was created using SVG code (which I am keen to play more with!).
+                    </p>
+                    {/* <p> If you hover the mouse over the left hand side panel, you will see a link to see the files in my git repository. You can also ask me to show you how they work (so no, the button on the left called "ask" doesn't do anything!). </p>   */}
+                    
+                    <p>When you are ready, you can use the trackpad to slide two fingers up and see the next page!</p>
                   </div>
+                </div>     
 
-                  <div  className="description python-overlay-container" >
-                    <div id="python-svg">
-                      <SvgPythonGraph />
-                    </div>
-                    <div id="python-overlay">
-                      <div>
-                        <p>Welcome to my portfolio! Here you will see the projects which were part of my <span className="python-pink">SheCodes</span> journey.</p> 
-                        
-                        <p>This first page you are seeing now is dedicated to my <span className="python-pink">python</span> project. On the left you can see some of the graphs that I created as part of this project. The fake graph under this text was created using SVG code (which I am keen to play more with!).
-                        </p>
-                        {/* <p> If you hover the mouse over the left hand side panel, you will see a link to see the files in my git repository. You can also ask me to show you how they work (so no, the button on the left called "ask" doesn't do anything!). </p>   */}
-                        
-                        <p>When you are ready, you can use the trackpad to slide two fingers up and see the next page!</p>
-                      </div>
-                    </div>     
-
-                  </div>
-
+              </div>
             </HalfPage>
 
           </div>
 
         {/* ********* Django/SheCodes News - Page 2 ********* */}
-        {/*          ******************         */}
           <div className="skw-page skw-page-2">
 
-            <div className="skw-page__half skw-page__half--left">
-              <div className="skw-page__skewed">
-                <div className="skw-page__content">
-
-                  <div className="title-wrapper">
-                    <Logo src={LogoDjango} figHeight="6rem"/> 
-                    <h2 id="django" className="skw-page__heading fw-bold">Django</h2>
-                  </div>
-
-                  <div className="description white">
-                    <p>This project is how I learned <span className="django-blue fw-bold">Django</span> and fell in love with it!</p>
-                    <p>The website consists of a newspaper style website which allows registered users to post stories, like and favourite stories and see them in their profile. Visitors can filter stories by category and also search stories for particular words and expressions.</p>
-                    <p>
-                      This project wasn't deployed during the SheCodes course. I have since deployed it but I am yet to add data to it, so unfortunately it looks empty for now.
-                    </p>
-                  </div>
-
-                </div>
-              </div>
+          <HalfPage side="left" >
+            <div className="title-wrapper">
+              <Logo src={LogoDjango} figHeight="6rem"/> 
+              <h2 id="django" className="skw-page__heading fw-bold">Django</h2>
             </div>
+
+            <div className="description white">
+              <p>This project is how I learned <span className="django-blue fw-bold">Django</span> and fell in love with it!</p>
+              <p>The website consists of a newspaper style website which allows registered users to post stories, like and favourite stories and see them in their profile. Visitors can filter stories by category and also search stories for particular words and expressions.</p>
+              <p>
+                This project wasn't deployed during the SheCodes course. I have since deployed it but I am yet to add data to it, so unfortunately it looks empty for now.
+              </p>
+            </div>
+          </HalfPage>
 
             <div className="overlay-container">
 
@@ -215,7 +196,6 @@ function Projects() {
           </div>
 
         {/* ********* Crowdfunding - Page 3 ********* */}
-        {/*          *************************         */}
           <div className="skw-page skw-page-3">
 
             <div className="overlay-container">
@@ -252,24 +232,19 @@ function Projects() {
           {/* Group Project - Page 4 */}
           <div className="skw-page skw-page-4">
 
-            <div className="skw-page__half skw-page__half--left">
-              <div className="skw-page__skewed">
-                <div className="skw-page__content">
-                    <div className="title-wrapper">
-                      <Logo src={LogoGroup} figHeight="6rem"/>
-                      <h2 id="group-project" className="skw-page__heading">groupProject</h2>
-                    </div>
-
-                    <div className="description">
-                      <p>Like the previous project, this website was written with <span>Django REST</span> for the back end and <span>React</span> for the front end.</p>
-                      <p>I contributed a lot to the <span>Django</span> and <span>React</span> parts, but not much the <span>CSS</span>. In spite of that, it was here that I started making peace with <span>CSS</span>!</p>
-                      <p>Overall, this was the best part of the <span>SheCodes</span> program! It was great working in a team and having the chance to see how other people work, to learn from my group mates' codes and to deal with the different backgrounds, experiences, expectations and opinions.</p>
-                      <p><a href="https://ellenportfolio.herokuapp.com/">Ellen Marinko</a> was one of my group mates, check out her work, she is amazing!</p>
-                    </div>
-                </div>
+            <HalfPage side="left" >
+              <div className="title-wrapper">
+                <Logo src={LogoGroup} figHeight="6rem"/>
+                <h2 id="group-project" className="skw-page__heading">groupProject</h2>
               </div>
-            </div>
 
+              <div className="description">
+                <p>Like the previous project, this website was written with <span>Django REST</span> for the back end and <span>React</span> for the front end.</p>
+                <p>I contributed a lot to the <span>Django</span> and <span>React</span> parts, but not much the <span>CSS</span>. In spite of that, it was here that I started making peace with <span>CSS</span>!</p>
+                <p>Overall, this was the best part of the <span>SheCodes</span> program! It was great working in a team and having the chance to see how other people work, to learn from my group mates' codes and to deal with the different backgrounds, experiences, expectations and opinions.</p>
+                <p><a href="https://ellenportfolio.herokuapp.com/">Ellen Marinko</a> was one of my group mates, check out her work, she is amazing!</p>
+              </div>
+            </HalfPage>
 
             <div className="overlay-container">
               <HalfPage side="right" className="bf-overlay" />
@@ -303,7 +278,6 @@ function Projects() {
               {/* overlay on top of overlay in order not to put a filter on top of icon */}
               <HalfPage side="left" className="overlay-top">
                 <div className="icons">
-                  {/* want to wrap this in coleswrapper, need to find out how to send the component as props */}
                   <div>
                     <a onClick={fileLink} href="#"><FaSpeakap className="fa-icon  coles-red" /></a>
                     <p className="invisible black">ask me to give you a demo!</p>
@@ -313,61 +287,49 @@ function Projects() {
 
             </div>
 
-            <div className="skw-page__half skw-page__half--right">
-              <div className="skw-page__skewed coles-middle-wrap">
-                <div className="skw-page__content coles-inner-wrap">
-                  <ColesLogoWrapper logoID="logo-coles-img" className="coles-logo"/>     
-                  <h2 id="coles" className="skw-page__heading">collect data</h2>
-                  <div className="description">
-                    <p>For this <span className="white fw-bold">webscraping</span> project, I wrote an <span className="white fw-bold">AppleScript</span> program to get data from two large Australian retailers websites. Once you run the script, it opens Safari, directs Safari to the retailer website, types in the password (when needed), changes the location (to get price data from other capital cities), and records all data in a .csv file saved to desktop.</p>
-                  </div>
-
-                </div>
+            <HalfPage side="right" >
+              <ColesLogoWrapper logoID="logo-coles-img" className="coles-logo"/>     
+              <h2 id="coles" className="skw-page__heading">collect data</h2>
+              <div className="description">
+                <p>For this <span className="white fw-bold">webscraping</span> project, I wrote an <span className="white fw-bold">AppleScript</span> program to get data from two large Australian retailers websites. Once you run the script, it opens Safari, directs Safari to the retailer website, types in the password (when needed), changes the location (to get price data from other capital cities), and records all data in a .csv file saved to desktop.</p>
               </div>
-            </div>
+            </HalfPage>
 
           </div>
 
-          
         {/* ********* Portfolio - sweked pages - Page 6 ********* */}
-        {/*          ******************         */}
         <div className="skw-page skw-page-6">
 
-          <div className="skw-page__half skw-page__half--left">
-            <div className="skw-page__skewed">
-              <div className="skw-page__content django">
-                <div className="title-wrapper">
-                  <Logo src={LogoSkewed} figHeight="5rem"/> 
-                  <h2 id="skewed"className="skw-page__heading fw-bold"> Portfolio </h2>
-                </div>
-                <div className="description">
-                  <p className="skewed-green">This website was built using code by <span className="skewed-purple">Nikolay Talanov</span> (right side panel) as the base. His code is written in <span className="skewed-yellow">Sass</span> and <span className="skewed-yellow">Jquery</span>, two things I have little to no experience with. I wrapped <span className="skewed-purple">Nikolay</span>'s code in <span className="skewed-yellow">React</span> and modified and added as needed. </p>
-                  
-                  <p className="skewed-green">This project was the first time I really had fun with <span className="skewed-bright-white">CSS</span>! </p>
-
-                  <p className="skewed-green">My priorities for this project are making it mobile friendly and translating the Jquery into React. I also want to improve the code by using <span className="skewed-yellow">React</span> components and investigate styled-components (which I used for this project) a bit more to see if I want to adopt it into my style.</p>
-                </div>
-              </div>
+          <HalfPage side="left">
+            <div className="title-wrapper">
+              <Logo src={LogoSkewed} figHeight="5rem"/> 
+              <h2 id="skewed"className="skw-page__heading fw-bold"> Portfolio </h2>
             </div>
-          </div>
+            <div className="description">
+              <p className="skewed-green">This website was built using code by <span className="skewed-purple">Nikolay Talanov</span> (right side panel) as the base. His code is written in <span className="skewed-yellow">Sass</span> and <span className="skewed-yellow">Jquery</span>, two things I have little to no experience with. I wrapped <span className="skewed-purple">Nikolay</span>'s code in <span className="skewed-yellow">React</span> and modified and added as needed. </p>
+              
+              <p className="skewed-green">This project was the first time I really had fun with <span className="skewed-bright-white">CSS</span>! </p>
 
-          <div className="overlay-container">
-
-          <HalfPage side="right" className="bf-overlay" />
-
-          <HalfPage side="right" className="overlay">
-            <div className="icons">
-              <div>
-                <a href="https://codepen.io/suez/pen/gadLre"><FaExternalLinkAlt className="fa-icon  skewed-white" /></a>
-                <p className="invisible">open codepen</p>
-              </div>
-              <div>
-                <a href="https://github.com/viviannevilar/portfolio-react"><FaGithub className="fa-icon  skewed-white" /></a>
-                <p className="invisible"> git repository </p>
-              </div>
+              <p className="skewed-green">My priorities for this project are making it mobile friendly and translating the Jquery into React. I also want to improve the code by using <span className="skewed-yellow">React</span> components and investigate styled-components (which I used for this project) a bit more to see if I want to adopt it into my style.</p>
             </div>
           </HalfPage>
 
+          <div className="overlay-container">
+
+            <HalfPage side="right" className="bf-overlay" />
+
+            <HalfPage side="right" className="overlay">
+              <div className="icons">
+                <div>
+                  <a href="https://codepen.io/suez/pen/gadLre"><FaExternalLinkAlt className="fa-icon skewed-white" /></a>
+                  <p className="invisible">open codepen</p>
+                </div>
+                <div>
+                  <a href="https://github.com/viviannevilar/portfolio-react"><FaGithub className="fa-icon skewed-white" /></a>
+                  <p className="invisible"> git repository </p>
+                </div>
+              </div>
+            </HalfPage>
 
             {/* filter not being used */}
             {/* <svg>
@@ -382,53 +344,40 @@ function Projects() {
             </svg> */}
 
           </div>
-
           </div>
 
-
-          {/* Page 7 -  */}
+          {/* Page 7 -  Me */}
           <div className="skw-page skw-page-7">
 
           <HalfPage side="left" className="bf-overlay" />
 
-            <div className="skw-page__half skw-page__half--right">
-              <div className="skw-page__skewed">
-                <div className="skw-page__content">
-                  {/* <Logo /> */}
-                  <h2 id="about-me" className="skw-page__heading">Vivianne Vilar</h2>
-                  <div className="description">
-                    <p>Full stack developer.</p>
+          <HalfPage side="right">
+            <h2 id="about-me" className="skw-page__heading">Vivianne Vilar</h2>
+              <div className="description">
+                <p>Full stack developer.</p>
 
-                    <div className="button-about-wrapper">
-                      <button onClick={alertButton} className="button-about">Python</button>
-                      <button onClick={alertButton}className="button-about">Django</button>
-                      <button onClick={alertButton}className="button-about">Django REST</button>
-                      <button onClick={alertButton}className="button-about">React</button>
-                      <button onClick={alertButton}className="button-about">R</button>
-                      <button onClick={alertButton}className="button-about">Applescript</button>
-                      <button onClick={alertButton}className="button-about">HTML</button>
-                      <button onClick={alertButton}className="button-about">CSS</button>
-                      <button onClick={alertButton}className="button-about">JavaScript</button>
-                      {/* <button onClick={clickButton("button6")} className={`"button-about" ${buttonClicked === "button6" ? "button-active" : ""}`}>{buttonClicked === "button6" ? "Not a real button!" : "Applescript"}</button> */}
-                    </div>
-                  
-                    
-                    <p>Thank you for looking through my portfolio!</p>
-                    <p>viviannevilar at gmail dot com</p>
-
-                  </div>
+                <div className="button-about-wrapper">
+                  <button onClick={alertButton} className="button-about">Python</button>
+                  <button onClick={alertButton}className="button-about">Django</button>
+                  <button onClick={alertButton}className="button-about">Django REST</button>
+                  <button onClick={alertButton}className="button-about">React</button>
+                  <button onClick={alertButton}className="button-about">R</button>
+                  <button onClick={alertButton}className="button-about">Applescript</button>
+                  <button onClick={alertButton}className="button-about">HTML</button>
+                  <button onClick={alertButton}className="button-about">CSS</button>
+                  <button onClick={alertButton}className="button-about">JavaScript</button>
+                  {/* <button onClick={clickButton("button6")} className={`"button-about" ${buttonClicked === "button6" ? "button-active" : ""}`}>{buttonClicked === "button6" ? "Not a real button!" : "Applescript"}</button> */}
                 </div>
+                
+                <p>Thank you for looking through my portfolio!</p>
+                <p>viviannevilar at gmail dot com</p>
               </div>
-            </div>
+          </HalfPage>
 
           </div>
 
-
-          {/* those are the end of the divs enclosing the pages. Need 3 divs after this comment */}
-
         </div>
       </div>
-
 
       <div className="mobile-version">
         <div className="logo-mobile">
@@ -440,13 +389,11 @@ function Projects() {
         <div className="logo-mobile">
           <a href="https://github.com/viviannevilar/"><FaGithub className="fa-icon fa-icon-mobile my-gray" /></a>
         </div>
-
         
       </div>
 
     </div>
   );
 }
-
 
 export default Projects
