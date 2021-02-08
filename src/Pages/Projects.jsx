@@ -2,7 +2,7 @@
 import React from "react";
 import { Helmet } from 'react-helmet'
 import $ from 'jquery';
-import { FaExternalLinkAlt, FaGithub, FaSpeakap } from 'react-icons/fa'
+import { FaExternalLinkAlt, FaGithub, FaSpeakap, FaArrowDown, FaArrowUp } from 'react-icons/fa'
 
 // components
 import ColesLogoWrapper from "../Components/ColesWrapper"
@@ -81,6 +81,14 @@ function Projects() {
   function alertButton() {
     alert("This button doesn't do anything, but have fun clicking away!")
   }
+
+  const nextPage = () => {
+    navigateUp();
+  }
+
+  const prevPage = () => {
+    navigateDown();
+  }
   // function fileLink(e) {
   //   e.preventDefault();
 
@@ -101,9 +109,9 @@ function Projects() {
 
   return (
     <div>
-        <Helmet>
-          <title>{ TITLE }</title>
-        </Helmet>
+      <Helmet>
+        <title>{ TITLE }</title>
+      </Helmet>
 
       <div className="App">
 
@@ -377,6 +385,18 @@ function Projects() {
           </div>
 
         </div>
+
+      </div>
+
+      <div className="buttons-down">
+        <div>
+          <button id="prev" onClick={navigateUp}><FaArrowUp className="fs-4rem my-gray" /></button>
+          <p className="invisible my-gray"> previous </p>
+        </div>
+        <div>
+          <button id="next" onClick={navigateDown}><FaArrowDown className="fs-4rem  my-gray" /></button>
+          <p className="invisible my-gray"> next </p>
+        </div>
       </div>
 
       <div className="mobile-version">
@@ -387,10 +407,11 @@ function Projects() {
         <p>Thanks for stopping by! Unfortunately this website does not have a mobile version yet. Please open on a desktop computer! </p>
         <p>In the meantime, you can have a look at my github page:</p>
         <div className="logo-mobile">
-          <a href="https://github.com/viviannevilar/"><FaGithub className="fa-icon fa-icon-mobile my-gray" /></a>
+          <a href="https://github.com/viviannevilar/"><FaGithub className="fs-6rem fa-icon-mobile my-gray" /></a>
         </div>
         
       </div>
+
 
     </div>
   );
