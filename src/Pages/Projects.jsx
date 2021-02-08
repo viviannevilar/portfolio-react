@@ -82,13 +82,6 @@ function Projects() {
     alert("This button doesn't do anything, but have fun clicking away!")
   }
 
-  const nextPage = () => {
-    navigateUp();
-  }
-
-  const prevPage = () => {
-    navigateDown();
-  }
   // function fileLink(e) {
   //   e.preventDefault();
 
@@ -390,11 +383,11 @@ function Projects() {
 
       <div className="buttons-down">
         <div>
-          <button id="prev" onClick={navigateUp}><FaArrowUp className="fs-4rem my-gray" /></button>
+          <button onClick={navigateUp}><FaArrowUp className="fs-4rem my-gray" /></button>
           <p className="invisible my-gray"> previous </p>
         </div>
         <div>
-          <button id="next" onClick={navigateDown}><FaArrowDown className="fs-4rem  my-gray" /></button>
+          <button onClick={navigateDown}><FaArrowDown className="fs-4rem  my-gray" /></button>
           <p className="invisible my-gray"> next </p>
         </div>
       </div>

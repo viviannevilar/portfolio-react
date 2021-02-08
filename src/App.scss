@@ -65,7 +65,7 @@
   --my-pink: #ec1492;
   --my-green: #46d68f;
   --my-yellow: #fff3d6;
-  --my-gray: #4f514f;
+  --my-gray: #474747; /* #4f514f; */
 }
 
 .white { color: white;}
@@ -326,37 +326,6 @@ a:hover + p.invisible {
 button:hover + p.invisible {
   visibility: visible;
 }
-
-
-
-
-// #next, #prev {
-//   z-index: 100;
-//   margin-left: auto;
-//   margin-right: auto;
-//   left: 0;
-//   right: 0;
-//   text-align: center;
-//   font-size: 2rem;
-//   cursor: pointer;
-//   background-color: transparent;
-//   border: none;
-// }
-
-// #next:focus, #prev:focus {
-//   outline: none;
-//   box-shadow: none;
-// }
-
-// #next {
-//   position: absolute;
-//   bottom: 2rem;
-// }
-
-// #prev {
-//   position: absolute;
-//   top: 2rem;
-// }
 
 
 

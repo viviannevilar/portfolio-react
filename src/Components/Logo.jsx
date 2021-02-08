@@ -4,9 +4,10 @@ import styled from 'styled-components'
 const Logo = styled.img({
   marginBottom: "2rem",
   maxHeight: props => props.figHeight || "8rem",
+  backgroundColor: props => props.backgr || "transparent",
 })
 
-  // backgroundColor: "transparent",
+// backgroundColor: "transparent",
 
 Logo.defaultProps = {
   src: logoIMG,
