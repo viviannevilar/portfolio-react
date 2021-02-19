@@ -20,8 +20,6 @@ function Home() {
   const [contactActive, setContactActive] = useState(false)
 
 
-
-
   useEffect(() => {
     if (location.pathname === "/contact/") {
       setContactActive(true)

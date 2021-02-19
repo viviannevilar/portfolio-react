@@ -1,5 +1,3 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
@@ -42,9 +40,10 @@ html {
     min-width: 7rem;
     text-align: center;
     text-decoration: none;
+    transition: 0.3s;
   }
 
-  button:hover {
+  button:hover, .button:hover {
     font-style: bold;
     border: 2px solid var(--my-yellow);
     background-color: var(--my-yellow);
@@ -56,13 +55,9 @@ html {
     justify-content: space-around;
   }
 
-  button a {
+  .button {
     color: var(--my-yellow);
     text-decoration: none;
-  }
-
-  button a:hover {
-    color: var(--my-gray);
   }
 
   h1 {

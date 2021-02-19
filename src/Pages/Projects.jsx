@@ -1,8 +1,9 @@
 ////////////////// imports ///////////////////
 import React from "react";
 import { Helmet } from 'react-helmet'
-import $ from 'jquery';
+//import $ from 'jquery';
 import { FaExternalLinkAlt, FaGithub, FaSpeakap, FaArrowDown, FaArrowUp } from 'react-icons/fa'
+import "./Projects.scss"
 
 // components
 import ColesLogoWrapper from "../Components/ColesWrapper"
@@ -11,6 +12,7 @@ import SvgPythonGraph from "../Components/SvgPythonGraph"
 // import IconStack from "../Components/IconStack"
 // import SvgPythonPic from "../Components/SvgPythonPic.svg"
 import { HalfPage } from "./ProjectPages/ProjectPage"
+// import useSwipeDetector from "../Components/Swipe"
 
 // images
 import LogoGroup from "../images/MeGroup6.png"
@@ -25,19 +27,40 @@ function Projects() {
 
   const TITLE = 'Vivianne Vilar'
 
-  // Jquery
   var curPage = 1;
-  var numOfPages = $(".skw-page").length;
+  var numOfPages = document.getElementsByClassName("skw-page").length;
+
   var animTime = 1000;
   var scrolling = false;
-  var pgPrefix = ".skw-page-";
+  var pgPrefix = "skw-page-";
+
+  // Jquery version
+  // var numOfPages = $(".skw-page").length;
+  // var pgPrefix = ".skw-page-";
 
   function pagination() {
     scrolling = true;
 
-    $(pgPrefix + curPage).removeClass("inactive").addClass("active");
-    $(pgPrefix + (curPage - 1)).addClass("inactive");
-    $(pgPrefix + (curPage + 1)).removeClass("active");
+    var tempElement = document.getElementsByClassName(pgPrefix + curPage)
+    for(var i = 0; i < tempElement.length; i++) {
+      tempElement[i].classList.remove("inactive");
+      tempElement[i].classList.add("active");      
+    }
+
+    tempElement = document.getElementsByClassName(pgPrefix + (curPage - 1))
+    for(var i = 0; i < tempElement.length; i++) {
+      tempElement[i].classList.add("inactive");
+    }
+
+    tempElement = document.getElementsByClassName(pgPrefix + (curPage + 1))
+    for(var i = 0; i < tempElement.length; i++) {
+      tempElement[i].classList.remove("active");
+    }
+
+    // Jquery version 
+    //$(pgPrefix + curPage).removeClass("inactive").addClass("active");
+    //$(pgPrefix + (curPage - 1)).addClass("inactive");
+    //$(pgPrefix + (curPage + 1)).removeClass("active");
 
     setTimeout(function() {
       scrolling = false;
@@ -73,6 +96,50 @@ function Projects() {
       navigateDown();
     }
   });
+
+
+  document.addEventListener('touchstart', handleTouchStart, false);        
+  document.addEventListener('touchmove', handleTouchMove, false);
+
+  var xDown = null;                                                        
+  var yDown = null;               
+
+  function handleTouchStart(evt) {                                         
+      xDown = evt.touches[0].clientX;                                      
+      yDown = evt.touches[0].clientY;                                      
+  };    
+
+  // https://stackoverflow.com/a/39486105/347646
+  function handleTouchMove(evt) {
+      if ( ! xDown || ! yDown ) {
+        return;
+      }
+  
+      var xUp = evt.touches[0].clientX;                                    
+      var yUp = evt.touches[0].clientY;
+  
+      var xDiff = xDown - xUp;
+      var yDiff = yDown - yUp;
+      if(Math.abs( xDiff )+Math.abs( yDiff )>150){ //to deal with to short swipes
+  
+      if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+        if ( xDiff > 0 ) {/* left swipe */ 
+          
+        } else {/* right swipe */
+          
+        }                       
+      } else {
+        if ( yDiff > 0 ) {/* up swipe */
+          navigateDown()
+        } else { /* down swipe */
+          navigateUp()
+        }                                                                 
+      }
+      /* reset values */
+      xDown = null;
+      yDown = null;
+      }
+  };
 
   function fileLink() {
     alert("Sorry, this button doesn't do anything! Ask me, I will be happy to show you!")
@@ -120,7 +187,7 @@ function Projects() {
               <HalfPage side="left" className="overlay">
                 <div className="icons">
                   <div>
-                    <a href="https://github.com/viviannevilar/Python-project"><FaGithub className="fa-icon python-black" /></a>
+                    <a href="https://github.com/viviannevilar/Python-project"><FaGithub className="fs-6rem python-black" /></a>
                     <p className="invisible">git repository</p>
                   </div>
                 </div>
@@ -167,7 +234,8 @@ function Projects() {
             </div>
 
             <div className="description white">
-              <p>This project is how I learned <span className="django-blue fw-bold">Django</span> and fell in love with it!</p>
+              <p>This project is how I learned <span className="django-blue fw-bold">Django</span> and fell in love with it!
+              </p>
               <p>The website consists of a newspaper style website which allows registered users to post stories, like and favourite stories and see them in their profile. Visitors can filter stories by category and also search stories for particular words and expressions.</p>
               <p>
                 This project wasn't deployed during the SheCodes course. I have since deployed it but I am yet to add data to it, so unfortunately it looks empty for now.
@@ -182,11 +250,11 @@ function Projects() {
               <HalfPage side="right" className="overlay" >
                 <div className="icons">
                   <div>
-                    <a href="http://shecodes-news.herokuapp.com/news/"><FaExternalLinkAlt className="fa-icon black" /></a>
+                    <a href="http://shecodes-news.herokuapp.com/news/"><FaExternalLinkAlt className="fs-6rem black" /></a>
                     <p className="invisible">open website</p>
                   </div>
                   <div>
-                    <a href="https://github.com/viviannevilar/Django-project"><FaGithub className="fa-icon black" /></a>
+                    <a href="https://github.com/viviannevilar/Django-project"><FaGithub className="fs-6rem black" /></a>
                     <p className="invisible">git repository</p>
                   </div>
                 </div>
@@ -205,11 +273,11 @@ function Projects() {
               <HalfPage side="left" className="overlay" >
                 <div className="icons">
                   <div>
-                    <a href="https://gofundshe.herokuapp.com/"><FaExternalLinkAlt className="fa-icon crowd-white" /></a>
+                    <a href="https://gofundshe.herokuapp.com/"><FaExternalLinkAlt className="fs-6rem crowd-white" /></a>
                     <p className="invisible"> open website</p>
                   </div>  
                   <div>
-                    <a href="https://github.com/viviannevilar/crowd-react"><FaGithub className="fa-icon crowd-white" /></a> 
+                    <a href="https://github.com/viviannevilar/crowd-react"><FaGithub className="fs-6rem crowd-white" /></a> 
                     <p className="invisible"> git repository</p>
                   </div>
                 </div>           
@@ -253,11 +321,11 @@ function Projects() {
               <HalfPage side="right" className="overlay">
                 <div className="icons">
                   <div>
-                    <a href="http://comparalist.herokuapp.com"><FaExternalLinkAlt className="fa-icon  group-project-gray" /></a>
+                    <a href="http://comparalist.herokuapp.com"><FaExternalLinkAlt className="fs-6rem  group-project-gray" /></a>
                     <p className="invisible"> open website</p>
                   </div>
                   <div>
-                    <a href="https://github.com/viviannevilar/group-react"><FaGithub className="fa-icon  group-project-gray" /></a>
+                    <a href="https://github.com/viviannevilar/group-react"><FaGithub className="fs-6rem  group-project-gray" /></a>
                     <p className="invisible"> git repository</p>
                   </div>
                 </div>
@@ -280,7 +348,7 @@ function Projects() {
               <HalfPage side="left" className="overlay-top">
                 <div className="icons">
                   <div>
-                    <a onClick={fileLink} href="#"><FaSpeakap className="fa-icon  coles-red" /></a>
+                    <a onClick={fileLink} href="#"><FaSpeakap className="fs-6rem coles-red" /></a>
                     <p className="invisible black">ask me to give you a demo!</p>
                   </div>
                 </div>
@@ -322,11 +390,11 @@ function Projects() {
             <HalfPage side="right" className="overlay">
               <div className="icons">
                 <div>
-                  <a href="https://codepen.io/suez/pen/gadLre"><FaExternalLinkAlt className="fa-icon skewed-white" /></a>
+                  <a href="https://codepen.io/suez/pen/gadLre"><FaExternalLinkAlt className="fs-6rem skewed-white" /></a>
                   <p className="invisible">open codepen</p>
                 </div>
                 <div>
-                  <a href="https://github.com/viviannevilar/portfolio-react"><FaGithub className="fa-icon skewed-white" /></a>
+                  <a href="https://github.com/viviannevilar/portfolio-react"><FaGithub className="fs-6rem skewed-white" /></a>
                   <p className="invisible"> git repository </p>
                 </div>
               </div>
@@ -400,7 +468,7 @@ function Projects() {
         <p>Thanks for stopping by! Unfortunately this website does not have a mobile version yet. Please open on a desktop computer! </p>
         <p>In the meantime, you can have a look at my github page:</p>
         <div className="logo-mobile">
-          <a href="https://github.com/viviannevilar/"><FaGithub className="fs-6rem fa-icon-mobile my-gray" /></a>
+          <a href="https://github.com/viviannevilar/"><FaGithub className="fs-4rem my-gray" /></a>
         </div>
         
       </div>

@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { bool } from 'prop-types';
-import "./Menu.css"
+import "./Menu.css";
 // import { createGlobalStyle } from 'styled-components';
 import Pdf from '../images/CV_VivianneVilar.pdf';
-import Logo from "../Components/Logo"
+import Logo from "../Components/Logo";
 
 
 export const StyledMenu = styled.nav`
@@ -16,7 +16,7 @@ export const StyledMenu = styled.nav`
   text-align: left;
   padding: 2rem;
   position: absolute;
-  border: 2px solid var(--my-gray);
+  border: 2px solid var(--my-yellow);
   top: 0;
   left: 0;
   transition: transform 0.3s ease-in-out;
